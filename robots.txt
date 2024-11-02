@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://CogSysLab.github.io/neu-csl/sitemap.xml
+Sitemap: https://neu-csl.github.io/sitemap.xml

@@ -1,0 +1,24 @@
+<div class="repo p-2 text-center">
+  <a href="https://github.com/{{ include.username }}">
+    {% comment %}
+    <img
+      class="repo-img-light w-100"
+      alt="{{ include.username }}'s profile picture"
+      src="https://github-readme-stats.vercel.app/api/?username={{ include.username }}&theme={{ site.repo_theme_light }}&show_icons=true"
+    >
+    <img
+      class="repo-img-dark w-100"
+      alt="{{ include.username }}'s profile picture"
+      src="https://github-readme-stats.vercel.app/api/?username={{ include.username }}&theme={{ site.repo_theme_dark }}&show_icons=true"
+    >
+    <br>
+    {% endcomment %}
+    <img
+      class="profile-pic mt-2"
+      alt="{{ include.username }}'s profile picture"
+      src="https://github.com/{{ include.username }}.png"
+      style="border-radius: 50%; width: 80px; height: 80px;"
+    >
+  </a>
+  <div class="mt-1">{{ include.username }}</div>
+</div>

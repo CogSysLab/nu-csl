@@ -1,0 +1,19 @@
+github_users:
+  - Yunusbcr
+  - mlpotter
+  - klockwood19
+  - ahmetdemirkayaee
+  - akbar-navid
+  - Elifnursunger
+  - singh17ashu
+  - byzklknl
+  - Faghihpirayesh
+  - paulghanem
+
+github_organizations:
+  - neu-spiral
+
+repo_description_lines_max: 2
+
+github_repos:
+  - mlpotter/SAWAR

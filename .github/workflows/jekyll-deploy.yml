@@ -1,0 +1,38 @@
+name: Jekyll Build and Deploy
+
+# Trigger the workflow on pushes to the main branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3.5'  # Use the Ruby version compatible with Jekyll
+          bundler-cache: true  # Caches gems for faster builds
+
+      - name: Install dependencies
+        run: |
+          bundle install  # Installs all gems defined in the Gemfile
+
+      - name: Build the Jekyll site
+        run: |
+          bundle exec jekyll build  # Runs the Jekyll build
+        env:
+          JEKYLL_ENV: production  # Ensures production configuration for Jekyll
+
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication
+          publish_dir: ./_site                       # Directory to deploy (Jekyll output)
+

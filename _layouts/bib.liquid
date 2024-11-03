@@ -52,7 +52,7 @@
      <!-- Entry status key -->
     <div class="status">
       {% if entry.status %}
-        <span class="badge status-badge {% if entry.status == 'published' %}bg-success{% elsif entry.status == 'under review' %}bg-warning{% elsif entry.status == 'rejected' %}bg-danger{% else %}bg-secondary{% endif %}">
+        <span class="badge status-badge {% if entry.status == 'published' %}bg-success{% elsif entry.status == 'under review' %}bg-warning{% elsif entry.status == 'arxiv' %}bg-danger{% else %}bg-secondary{% endif %}">
           {{ entry.status | capitalize }}
         </span>
       {% endif %}

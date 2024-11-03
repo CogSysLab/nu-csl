@@ -1,7 +1,7 @@
 <!-- Image Carousel -->
 <div id="imageCarousel" class="carousel slide mb-4" data-ride="carousel">
     <div class="carousel-inner">
-        {% assign images = site.data[page.gallery].images %}
+        {% assign images = site.data.gallery.images %}
         {% for img in images %}
             <div class="carousel-item {% if forloop.first %}active{% endif %}">
                 <img src="/assets/img/gallery/{{ img.file_name }}" class="d-block w-100" alt="Image description {{ forloop.index }}">

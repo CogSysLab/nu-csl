@@ -13,6 +13,7 @@ teaser: >
     I am a PhD student interested in Bayesian statistics, time-to-event modelinig, and physics-based deep learning. A fun fact about me is that I am a professional juggler (I can juggle anything).
 profile:
     name: Michael Potter
+    position: (coadvised with Michael Everett)
     align: right
     image: profile_pictures/potterm.jpg
     email: potter.mi@northeastern.edu
@@ -27,7 +28,7 @@ profile:
         Huntington, Massachusetts
 ---
 
-Michael Potter is a Ph.D. candidate at Northeastern University under the advisement of Deniz Erdo\u{g}mu\c{s} of the Cognitive Systems Laboratory (CSL). He received his B.S, M.S., and M.S.  degrees in Electrical and Computer Engineering from Northeastern University and University of California Los Angeles (UCLA) in 2020, 2020, and 2022 respectively. His research interests are in recommendation systems, Bayesian Neural Networks, uncertainty quantification, and dynamics based manifold learning.  
+Michael Potter is a Ph.D. candidate at Northeastern University Cognitive Systems Laboratory (CSL). He received his B.S, M.S., and M.S.  degrees in Electrical and Computer Engineering from Northeastern University and University of California Los Angeles (UCLA) in 2020, 2020, and 2022 respectively. His research interests are in recommendation systems, Bayesian Neural Networks, uncertainty quantification, and dynamics based manifold learning.  
 
 
 ## Awards

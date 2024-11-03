@@ -4,7 +4,7 @@
         {% assign images = site.data.gallery.images %}
         {% for img in images %}
             <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                <img src="/assets/img/gallery/{{ img.file_name }}" class="d-block w-100" alt="Image description {{ forloop.index }}">
+                <img src="{{ '/assets/img/gallery' | append: img.image | relative_url }}" class="d-block w-100" alt="Image description {{ forloop.index }}">
                 {% if img.description %}
                     <div class="carousel-caption d-none d-md-block" style="background-color: rgba(255, 255, 255, 0.5); padding: 0; width: 100%; left: 50%; transform: translateX(-50%); bottom: 60px;">
                         <h5 style="margin: 0.7em; text-align: center; color: rgba(65, 65, 65, 1.0); font-size: 1.5rem;">{{ img.description }}</h5> <!-- Change the color as needed -->
@@ -27,3 +27,4 @@
         {% endfor %}
     </ol>
 </div>
+

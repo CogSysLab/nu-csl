@@ -1321,41 +1321,41 @@ ninja-keys::part(ninja-input-wrapper) {
   color: var(--global-text-color);
 }
 
-/* Increase font size specifically for the About page */
-#about-page .post-title {
-    font-size: 3.2em; /* Adjust title font size as needed */
-}
-
-#about-page p, #about-page td, #about-page th, #about-page .post-description, #about-page .contact-note, #about-page .publications, #about-page .news{
-    font-size: 1.5em; /* Adjust main content font size */
-    //line-height: 1.6; /* Optional: Increase line-height for readability */
-}
-
-/* news css adjustments (for news.html) */
-.news {
-  margin: 0; /* Remove margin around news section */
-}
-
-.news table {
-  width: 100%; /* Ensure table takes full width */
-  border-collapse: collapse; /* Remove gaps between cells */
-}
-
-.news th, .news td {
-  padding: 0.25rem 0.5rem; /* Adjust padding to minimize space */
-  vertical-align: top; /* Aligns content to the top */
-}
-
-.news th {
-  font-weight: bold; /* Keep header bold */
-  width: 20%; /* Adjust width of th to allow space for td */
-}
-
-.news td {
-  width: 80%; /* Adjust width of td to balance layout */
-}
-
-/* Clear margins to ensure no extra space */
-.news th, .news td {
-  margin: 0; /* Ensure no margin */
-}
+///* Increase font size specifically for the About page */
+//#about-page .post-title {
+//    font-size: 3.2em; /* Adjust title font size as needed */
+//}
+//
+//#about-page p, #about-page td, #about-page th, #about-page .post-description, #about-page .contact-note, #about-page .publications, #about-page .news{
+//    font-size: 1.5em; /* Adjust main content font size */
+//    //line-height: 1.6; /* Optional: Increase line-height for readability */
+//}
+//
+///* news css adjustments (for news.html) */
+//.news {
+//  margin: 0; /* Remove margin around news section */
+//}
+//
+//.news table {
+//  width: 100%; /* Ensure table takes full width */
+//  border-collapse: collapse; /* Remove gaps between cells */
+//}
+//
+//.news th, .news td {
+//  padding: 0.25rem 0.5rem; /* Adjust padding to minimize space */
+//  vertical-align: top; /* Aligns content to the top */
+//}
+//
+//.news th {
+//  font-weight: bold; /* Keep header bold */
+//  width: 20%; /* Adjust width of th to allow space for td */
+//}
+//
+//.news td {
+//  width: 80%; /* Adjust width of td to balance layout */
+//}
+//
+///* Clear margins to ensure no extra space */
+//.news th, .news td {
+//  margin: 0; /* Ensure no margin */
+//}

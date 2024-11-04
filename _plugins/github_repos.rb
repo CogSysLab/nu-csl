@@ -9,11 +9,11 @@ organization = 'neu-spiral' # GitHub organization name
 team_slug = 'csl'            # Specific team slug
 token = ENV['GITHUB_TOKEN']  # GitHub Personal Access Token (optional for higher limits)
 
-puts "Token is present: #{!token.nil?}"  # This will output true if the token is set, false if not.
+# puts "Token is present: #{!token.nil?}"  # This will output true if the token is set, false if not.
 
 # Masked print for security
-masked_token = token ? "#{token[0..3]}...#{token[-4..-1]}" : "Token not set"
-puts "GitHub Token: #{masked_token}"
+# masked_token = token ? "#{token[0..3]}...#{token[-4..-1]}" : "Token not set"
+# puts "GitHub Token: #{masked_token}"
 
 # Output file path determination
 potential_path_1 = File.expand_path("../../_data/repositories_scrape.yml", __dir__)
@@ -35,7 +35,7 @@ def fetch_all_data(base_uri, token = nil)
     request = Net::HTTP::Get.new(uri)
     request['Authorization'] = "token #{token}" if token
 
-    puts "Fetching data from: #{uri}"
+#     puts "Fetching data from: #{uri}"
 
     response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) do |http|
       http.request(request)

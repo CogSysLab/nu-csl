@@ -7,7 +7,7 @@ group_rank: 1
 title: Prof. Deniz Erdoğmuş
 description: Profile of Prof. Dr. Deniz Erdoğmuş, Head of the Cognitive Systems Lab
 lastname: Erdoğmuş
-publications: 'author^=*Erdoğmuş'
+publications: 'author^=*Erdoğmuş || author^=*Erdogmus || author^=*Erdogmuş || author^=*Erdoğmus || author^=*Erdo{\\u{g}}mus || author^=*Erdoğmus'
 
 teaser: >
     I am the CTO of Kostas Research Institute and a Professor of Electrical and Computer Engineering, where he previously served as the first Associate Chair for Research. His research interests are Signal and Image Analysis, Machine Learning, Information Fusion and Inference in multiple application domains

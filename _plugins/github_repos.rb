@@ -25,7 +25,7 @@ def fetch_all_data(base_uri, token = nil)
   page = 1
 
   loop do
-    uri = URI("#{base_uri}&page=#{page}&per_page=100") # Fetch 100 items per page
+    uri = URI("#{base_uri}?page=#{page}&per_page=100") # Fetch 100 items per page
     request = Net::HTTP::Get.new(uri)
     request['Authorization'] = "token #{token}" if token
 
@@ -49,23 +49,31 @@ def fetch_all_data(base_uri, token = nil)
   data
 end
 
-# Fetch all public repositories associated with the specified organization
-org_repos_url = "https://api.github.com/orgs/#{organization}/repos?type=public"
-repos = fetch_all_data(org_repos_url, token)
+# Fetch all repositories associated with the specified team
+team_repos_url = "https://api.github.com/orgs/#{organization}/teams/#{team_slug}/repos"
+repos = fetch_all_data(team_repos_url, token)
 
-# Check if any repositories were fetched
-if repos.empty?
-  puts "No public repositories found for the organization '#{organization}'."
+# Filter to include only public repositories
+public_repos = repos.select { |repo| !repo['private'] }
+
+# Check if any public repositories were fetched
+if public_repos.empty?
+  puts "No public repositories found for the team '#{team_slug}' in the organization '#{organization}'."
 else
-  puts "#{repos.length} public repositories found for the organization '#{organization}':"
-  repos.each { |repo| puts "- #{repo['name']}" }
+  puts "#{public_repos.length} public repositories found for the team '#{team_slug}':"
+  public_repos.each { |repo| puts "- #{repo['name']}" }
 end
+
+# Fetch all members of the specified team
+team_members_url = "https://api.github.com/orgs/#{organization}/teams/#{team_slug}/members"
+members = fetch_all_data(team_members_url, token)
 
 # Prepare YAML structure
 data = {
+  'github_users' => members.map { |member| member['login'] },
   'github_organizations' => [organization],
   'repo_description_lines_max' => 2,
-  'github_repos' => repos.map { |repo| "#{organization}/#{repo['name']}" }
+  'github_repos' => public_repos.map { |repo| "#{organization}/#{repo['name']}" }
 }
 
 # Ensure _data directory exists
@@ -74,7 +82,7 @@ FileUtils.mkdir_p(File.join(__dir__, "../_data/"))
 # Save YAML to the _data folder
 File.open(output_file, 'w') { |file| file.write(data.to_yaml) }
 
-puts "GitHub public repository data has been saved to #{output_file}"
+puts "GitHub team data has been saved to #{output_file}"
 
 # Load the YAML files (if needed, you can keep this part)
 # ... [existing code for merging YAML files] ...

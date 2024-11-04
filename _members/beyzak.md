@@ -8,7 +8,7 @@ team_frontpage: true
 title: Beyza Kalkanlı
 description: Profile of Beyza Kalkanlı, Doctoral Researcher at the Cognitive Systems Lab
 lastname: Kalkanlı
-publications: 'author^=*Kalkanli'
+publications: 'author^=*Kalkanlı'
 
 teaser: >
     During my PhD, I focus on improving active learning algorithms and training procedures, applying my knowledge to diverse domains such as eye disease detection and Brain-Computer Interface calibration.  I love traveling, playing volleyball, and I am unnecessarily competitive with games.

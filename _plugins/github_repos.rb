@@ -9,6 +9,8 @@ organization = 'neu-spiral' # GitHub organization name
 team_slug = 'csl'            # Specific team slug
 token = ENV['GITHUB_TOKEN']  # GitHub Personal Access Token (optional for higher limits)
 
+puts "Token is present: #{!token.nil?}"  # This will output true if the token is set, false if not.
+
 # Masked print for security
 masked_token = token ? "#{token[0..3]}...#{token[-4..-1]}" : "Token not set"
 puts "GitHub Token: #{masked_token}"
@@ -32,6 +34,8 @@ def fetch_all_data(base_uri, token = nil)
     uri = URI("#{base_uri}?page=#{page}&per_page=100") # Fetch 100 items per page
     request = Net::HTTP::Get.new(uri)
     request['Authorization'] = "token #{token}" if token
+
+    puts "Fetching data from: #{uri}"
 
     response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) do |http|
       http.request(request)

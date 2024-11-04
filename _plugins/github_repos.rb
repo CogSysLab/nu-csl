@@ -9,12 +9,6 @@ organization = 'neu-spiral' # GitHub organization name
 team_slug = 'csl'            # Specific team slug
 token = ENV['GITHUB_TOKEN']  # GitHub Personal Access Token (optional for higher limits)
 
-# puts "Token is present: #{!token.nil?}"  # This will output true if the token is set, false if not.
-
-# Masked print for security
-# masked_token = token ? "#{token[0..3]}...#{token[-4..-1]}" : "Token not set"
-# puts "GitHub Token: #{masked_token}"
-
 # Output file path determination
 potential_path_1 = File.expand_path("../../_data/repositories_scrape.yml", __dir__)
 potential_path_2 = File.expand_path("../_data/repositories_scrape.yml", __dir__)
@@ -31,11 +25,9 @@ def fetch_all_data(base_uri, token = nil)
   page = 1
 
   loop do
-    uri = URI("#{base_uri}?page=#{page}&per_page=100") # Fetch 100 items per page
+    uri = URI("#{base_uri}&page=#{page}&per_page=100") # Fetch 100 items per page
     request = Net::HTTP::Get.new(uri)
     request['Authorization'] = "token #{token}" if token
-
-#     puts "Fetching data from: #{uri}"
 
     response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) do |http|
       http.request(request)
@@ -57,25 +49,20 @@ def fetch_all_data(base_uri, token = nil)
   data
 end
 
-# Fetch all repositories associated with the specified team
-team_repos_url = "https://api.github.com/orgs/#{organization}/teams/#{team_slug}/repos"
-repos = fetch_all_data(team_repos_url, token)
+# Fetch all public repositories associated with the specified organization
+org_repos_url = "https://api.github.com/orgs/#{organization}/repos?type=public"
+repos = fetch_all_data(org_repos_url, token)
 
 # Check if any repositories were fetched
 if repos.empty?
-  puts "No repositories found for the team '#{team_slug}' in the organization '#{organization}'."
+  puts "No public repositories found for the organization '#{organization}'."
 else
-  puts "#{repos.length} repositories found for the team '#{team_slug}':"
+  puts "#{repos.length} public repositories found for the organization '#{organization}':"
   repos.each { |repo| puts "- #{repo['name']}" }
 end
 
-# Fetch all members of the specified team
-team_members_url = "https://api.github.com/orgs/#{organization}/teams/#{team_slug}/members"
-members = fetch_all_data(team_members_url, token)
-
 # Prepare YAML structure
 data = {
-  'github_users' => members.map { |member| member['login'] },
   'github_organizations' => [organization],
   'repo_description_lines_max' => 2,
   'github_repos' => repos.map { |repo| "#{organization}/#{repo['name']}" }
@@ -87,7 +74,7 @@ FileUtils.mkdir_p(File.join(__dir__, "../_data/"))
 # Save YAML to the _data folder
 File.open(output_file, 'w') { |file| file.write(data.to_yaml) }
 
-puts "GitHub team data has been saved to #{output_file}"
+puts "GitHub public repository data has been saved to #{output_file}"
 
 # Load the YAML files (if needed, you can keep this part)
 # ... [existing code for merging YAML files] ...

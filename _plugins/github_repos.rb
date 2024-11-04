@@ -9,7 +9,9 @@ organization = 'neu-spiral' # GitHub organization name
 team_slug = 'csl'            # Specific team slug
 token = ENV['GITHUB_TOKEN']  # GitHub Personal Access Token (optional for higher limits)
 
-puts "GitHub Token: #{token}"
+# Masked print for security
+masked_token = token ? "#{token[0..3]}...#{token[-4..-1]}" : "Token not set"
+puts "GitHub Token: #{masked_token}"
 
 # Output file path determination
 potential_path_1 = File.expand_path("../../_data/repositories_scrape.yml", __dir__)

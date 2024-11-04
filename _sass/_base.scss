@@ -172,7 +172,10 @@ ul.task-list input[type="checkbox"] {
 
   .card-img {
     width: 100%;
+    height: auto;
     padding-bottom: 0rem;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fills the circular frame */
   }
 
   .card-title {

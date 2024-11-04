@@ -5,19 +5,19 @@ require 'uri'
 require 'fileutils'
 
 # Configuration
-organization = 'neu-spiral' # Replace with your GitHub organization name
-token = ENV['GITHUB_TOKEN'] # GitHub Personal Access Token (optional for higher limits)
-# output_file = '../_data/repositories_scrape.yml' # Output YAML file path
+organization = 'neu-spiral' # GitHub organization name
+team_slug = 'csl'            # Specific team slug
+token = ENV['GITHUB_TOKEN']  # GitHub Personal Access Token (optional for higher limits)
 
+# Output file path determination
 potential_path_1 = File.expand_path("../../_data/repositories_scrape.yml", __dir__)
 potential_path_2 = File.expand_path("../_data/repositories_scrape.yml", __dir__)
 
-# Determine which path exists
 output_file = if File.exist?(File.dirname(potential_path_1))
-              potential_path_1
-            else
-              potential_path_2
-            end
+                potential_path_1
+              else
+                potential_path_2
+              end
 
 # Helper method to make paginated API requests
 def fetch_all_data(base_uri, token = nil)
@@ -34,7 +34,7 @@ def fetch_all_data(base_uri, token = nil)
     end
 
     if response.code.to_i != 200
-      puts "Error fetching data: #{response.body}"
+      puts "Error fetching data from #{uri}: #{response.body}"
       break
     end
 
@@ -49,11 +49,21 @@ def fetch_all_data(base_uri, token = nil)
   data
 end
 
-# Fetch all repositories
-repos = fetch_all_data("https://api.github.com/orgs/#{organization}/repos", token)
+# Fetch all repositories associated with the specified team
+team_repos_url = "https://api.github.com/orgs/#{organization}/teams/#{team_slug}/repos"
+repos = fetch_all_data(team_repos_url, token)
 
-# Fetch all public members (only public members are visible without admin access)
-members = fetch_all_data("https://api.github.com/orgs/#{organization}/members", token)
+# Check if any repositories were fetched
+if repos.empty?
+  puts "No repositories found for the team '#{team_slug}' in the organization '#{organization}'."
+else
+  puts "#{repos.length} repositories found for the team '#{team_slug}':"
+  repos.each { |repo| puts "- #{repo['name']}" }
+end
+
+# Fetch all members of the specified team
+team_members_url = "https://api.github.com/orgs/#{organization}/teams/#{team_slug}/members"
+members = fetch_all_data(team_members_url, token)
 
 # Prepare YAML structure
 data = {
@@ -69,10 +79,13 @@ FileUtils.mkdir_p(File.join(__dir__, "../_data/"))
 # Save YAML to the _data folder
 File.open(output_file, 'w') { |file| file.write(data.to_yaml) }
 
-puts "GitHub organization data has been saved to #{output_file}"
+puts "GitHub team data has been saved to #{output_file}"
+
+# Load the YAML files (if needed, you can keep this part)
+# ... [existing code for merging YAML files] ...
+
 
 # Paths to YAML files
-
 potential_path_1 = File.expand_path("../_data/repositories.yml", __dir__)
 potential_path_2 = File.expand_path("../../_data/repositories.yml", __dir__)
 
@@ -87,7 +100,6 @@ potential_path_1_combined = File.expand_path("../_data/repositories_combined.yml
 potential_path_2_combined = File.expand_path("../../_data/repositories_combined.yml", __dir__)
 
 output_file = File.exist?(File.dirname(potential_path_1_combined)) ? potential_path_1_combined : potential_path_2_combined
-
 
 # Load the YAML files
 data1 = File.exist?(file1) ? YAML.load_file(file1) : {}

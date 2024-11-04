@@ -10,7 +10,7 @@ lastname: Potter
 publications: 'author^=*Potter'
 
 teaser: >
-    I am a PhD student interested in Bayesian statistics, time-to-event modelinig, and physics-based deep learning. A fun fact about me is that I am a professional juggler (I can juggle anything).
+    I am a PhD student interested in Bayesian statistics, time-to-event modeling, and physics-based deep learning. A fun fact about me is that I am a professional juggler (I can juggle anything).
 profile:
     name: Michael Potter
     position: (coadvised with Michael Everett)

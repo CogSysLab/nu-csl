@@ -8,7 +8,7 @@ team_frontpage: true
 title: Ashutosh Singh
 description: Profile of Ashutosh Singh, Doctoral Researcher at the Cognitive Systems Lab
 lastname: Singh
-publications: 'author^=*Singh || author^=Ashutosh Singh'
+publications: 'author^=*Singh || author^=Ashutosh Singh || renamed^=*Ashutosh Singh'
 teaser: >
     My research lies at the intersection of signal processing, control theory, and machine learning. I am particularly interested in understanding complex dynamical systems through the analysis of spatio-temporal data. By integrating techniques from signal processing and control theory, I aim to uncover the underlying mechanisms governing these complex systems. Currently, I am engaged in projects ranging from designing machine learning models to draw inference from bio-signals, generative modeling of 3D human motion and recognition of patterns in brain activity induced by emotional stimuli. 
     In my leisure time, I enjoy engaging in conversations about geopolitics and stock market. I also love reading manga and watching anime.

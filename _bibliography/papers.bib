@@ -8,6 +8,7 @@
 @article{potter2024multistatic,
   title={Multistatic-Radar RCS-Signature Recognition of Aerial Vehicles: A Bayesian Fusion Approach},
   author={Potter, Michael and Akcakaya, Murat and Necsoiu, Marius and Schirner, Gunar and Erdo{\u{g}}mus, Deniz and Imbiriba, Tales},
+  renamed={Deniz Erdogmus},
   journal={IEEE Transactions on Aerospace and Electronic Systems},
   year={2024},
   publisher={IEEE},
@@ -20,11 +21,13 @@
     dimensions={true},
     status={published},
     selected={true},
+    abbr={TAES},
 }
 
 @misc{potter2024continuouslyoptimizingradarplacement,
       title={Continuously Optimizing Radar Placement with Model Predictive Path Integrals},
       author={Michael Potter and Shuo Tang and Paul Ghanem and Milica Stojanovic and Pau Closas and Murat Akcakaya and Ben Wright and Marius Necsoiu and Deniz Erdogmus and Michael Everett and Tales Imbiriba},
+      renamed={Deniz Erdogmus},
       year={2024},
       journal={IEEE Transactions on Aerospace and Electronic Systems},
       eprint={2405.18999},
@@ -36,12 +39,14 @@ Code will be made publicly available upon acceptance.},
     preview={J_Potter_MPPI_TAES_2024.gif},
       dimensions={true},
       status={under review},
-      html=https://arxiv.org/abs/2405.18999,
+      html={https://arxiv.org/abs/2405.18999},
+      abbr={TAES},
 }
 
 @article{potter2024robust,
   title={Robust Survival Analysis with Adversarial Regularization},
   author={Potter, Michael and Maxenti, Stefano and Everett, Michael},
+  renamed={Deniz Erdogmus},
   journal={arXiv preprint arXiv:2312.16019},
   year={2024},
   abstract={Survival Analysis (SA) models the time until an event occurs, with applications in fields like medicine, defense, finance, and aerospace. Recent research indicates that Neural Networks (NNs) can effectively capture complex data patterns in SA, whereas simple generalized linear models often fall short in this regard. However, dataset uncertainties (e.g., noisy measurements, human error) can degrade NN model performance. To address this, we leverage advances in NN verification to develop training objectives for robust, fully-parametric SA models. Specifically, we propose an adversarially robust loss function based on a Min-Max optimization problem. We employ CROWN-Interval Bound Propagation (CROWN-IBP) to tackle the computational challenges inherent in solving this Min-Max problem. Evaluated over 10 SurvSet datasets, our method, Survival Analysis with Adversarial Regularization (SAWAR), consistently outperforms baseline adversarial training methods and state-of-the-art (SOTA) deep SA models across various covariate perturbations with respect to Negative Log Likelihood (NegLL), Integrated Brier Score (IBS), and Concordance Index (CI) metrics. Thus, we demonstrate that adversarial robustness enhances SA predictive performance and calibration, mitigating data uncertainty and improving generalization across diverse datasets by up to 150% compared to baselines.},
@@ -49,15 +54,163 @@ Code will be made publicly available upon acceptance.},
   url={https://arxiv.org/abs/2312.16019},
   html=https://arxiv.org/abs/2312.16019,
   status={under review},
+  abbr={ICHI},
 }
 
 @article{sunger2023tubular,
   title={Tubular Curvature Filter: Implicit Pointwise Curvature Calculation Method for Tubular Objects},
   author={Sunger, Elifnur and Kalkanli, Beyza and Yildiz, Veysi and Imbiriba, Tales and Campbell, Peter and Erdogmus, Deniz},
+  renamed={Deniz Erdogmus},
   journal={arXiv preprint arXiv:2311.11931},
   abstract={Curvature estimation methods are important as they capture salient features for various applications in image processing, especially within medical domains where tortuosity of vascular structures is of significant interest. Existing methods based on centerline or skeleton curvature fail to capture curvature gradients across a rotating tubular structure. This paper presents a Tubular Curvature Filter method that locally calculates the acceleration of bundles of curves that traverse along the tubular object parallel to the centerline. This is achieved by examining the directional rate of change in the eigenvectors of the Hessian matrix of a tubular intensity function in space. This method implicitly calculates the local tubular curvature without the need to explicitly segment the tubular object. Experimental results demonstrate that the Tubular Curvature Filter method provides accurate estimates of local curvature at any point inside tubular structures.},
   preview={J_Sunger&Kalkanli_CurvatureFilter_TIP.png},
   html=https://arxiv.org/abs/2311.11931,
   year={2023},
   status={under review},
+  abbr={TMLR},
+}
+
+@article{akbar2024advancing,
+  title={Advancing post-traumatic seizure classification and biomarker identification: Information decomposition based multimodal fusion and explainable machine learning with missing neuroimaging data},
+  author={Akbar, Md Navid and Ruf, Sebastian F and Singh, Ashutosh and Faghihpirayesh, Razieh and Garner, Rachael and Bennett, Alexis and Alba, Celina and La Rocca, Marianna and Imbiriba, Tales and Erdo{\u{g}}mu{\c{s}}, Deniz and others},
+ renamed={Ashutosh Singh , Tales Imbiriba, Deniz Erdogmus},
+  journal={Computerized Medical Imaging and Graphics},
+  volume={115},
+  pages={102386},
+  year={2024},
+  publisher={Elsevier},
+  status={published},
+  html={https://www.sciencedirect.com/science/article/pii/S0895611124000636},
+  abstract={A late post-traumatic seizure (LPTS), a consequence of traumatic brain injury (TBI), can potentially evolve into a lifelong condition known as post-traumatic epilepsy (PTE). Presently, the mechanism that triggers epileptogenesis in TBI patients remains elusive, inspiring the epilepsy community to devise ways to predict which TBI patients will develop PTE and to identify potential biomarkers. In response to this need, our study collected comprehensive, longitudinal multimodal data from 48 TBI patients across multiple participating institutions. A supervised binary classification task was created, contrasting data from LPTS patients with those without LPTS. To accommodate missing modalities in some subjects, we took a two-pronged approach. Firstly, we extended a graphical model-based Bayesian estimator to directly classify subjects with incomplete modality. Secondly, we explored conventional imputation techniques. The imputed multimodal information was then combined, following several fusion and dimensionality reduction techniques found in the literature, and subsequently fitted to a kernel- or a tree-based classifier. For this fusion, we proposed two new algorithms: recursive elimination of correlated components (RECC) that filters information based on the correlation between the already selected features, and information decomposition and selective fusion (IDSF), which effectively recombines information from decomposed multimodal features. Our cross-validation findings showed that the proposed IDSF algorithm delivers superior performance based on the area under the curve (AUC) score. Ultimately, after rigorous statistical comparisons and interpretable machine learning examination using Shapley values of the most frequently selected features, we recommend the two following magnetic resonance imaging (MRI) abnormalities as potential biomarkers: the left anterior limb of internal capsule in diffusion MRI (dMRI), and the right middle temporal gyrus in functional MRI (fMRI).},
+  preview={J_Akbar_LPTS_CMIG_2024.png},
+  abbr={CMIG},
+}
+
+@article{singh2024learning,
+  title={Learning Semilinear Neural Operators: A Unified Recursive Framework For Prediction And Data Assimilation},
+  author={Singh, Ashutosh and Borsoi, Ricardo Augusto and Erdogmus, Deniz and Imbiriba, Tales},
+ renamed={Ashutosh Singh, Tales Imbiriba, Deniz Erdogmus},
+  journal={International Conference on Learning Representations},
+  year={2024},
+    status={published},
+    pdf={https://openreview.net/pdf?id=ZMv6zKYYUs},
+    selected={true},
+    preview={C_Singh_LNO_ICLR_2024.png},
+    abstract={Recent advances in the theory of Neural Operators (NOs) have enabled fast and
+accurate computation of the solutions to complex systems described by partial
+differential equations (PDEs). Despite their great success, current NO-based solutions face important challenges when dealing with spatio-temporal PDEs over
+long time scales. Specifically, the current theory of NOs does not present a systematic framework to perform data assimilation and efficiently correct the evolution of PDE solutions over time based on sparsely sampled noisy measurements.
+In this paper, we propose a learning-based state-space approach to compute the
+solution operators to infinite-dimensional semilinear PDEs. Exploiting the structure of semilinear PDEs and the theory of nonlinear observers in function spaces,
+we develop a flexible recursive method that allows for both prediction and data
+assimilation by combining prediction and correction operations. The proposed
+framework is capable of producing fast and accurate predictions over long time
+horizons, dealing with irregularly sampled noisy measurements to correct the solution, and benefits from the decoupling between the spatial and temporal dynamics of this class of PDEs. We show through experiments on the KuramotoSivashinsky, Navier-Stokes and Korteweg-de Vries equations that the proposed
+model is robust to noise and can leverage arbitrary amounts of measurements to
+correct its prediction over a long time horizon with little computational overhead.},
+abbr={ICLR},
+    }
+
+@article{mcveigh2024variational,
+  title={A Variational Autoencoder-Based Method to Investigate Degeneracy in the Neural Correlates of Psychological Concepts},
+  author={Kieran McVeigh and Ashutosh Singh and Deniz Erdogmus and Lisa Feldman Barrett and Ajay B. Satpute},
+  renamed={Ashutosh Singh , Deniz Erdogmus},
+  journal={Social & Affective Neuroscience Society},
+  year={2024},
+  status={published},
+  pdf={https://socialaffectiveneuro.org/wp-content/uploads/2024/05/SANS-Conference-2024_Program_Final.pdf},
+  preview={C_McVeigh_VAE_SANS_2024.png},
+  abbr={SANS},
+}
+
+@article{imbiriba2023wearable,
+  title={Wearable biosensing to predict imminent aggressive behavior in psychiatric inpatient youths with autism},
+  author={Imbiriba, Tales and Demirkaya, Ahmet and Singh, Ashutosh and Erdogmus, Deniz and Goodwin, Matthew S},
+  renamed={Ashutosh Singh , Tales Imbiriba, Deniz Erdogmus},
+  journal={JAMA network open},
+  volume={6},
+  number={12},
+  pages={e2348898--e2348898},
+  year={2023},
+  publisher={American Medical Association},
+  abstract={IMPORTANCE Aggressive behavior is a prevalent and challenging issue in individuals with autism.
+OBJECTIVE To investigate whether changes in peripheral physiology recorded by a wearable
+biosensor and machine learning can be used to predict imminent aggressive behavior before it occurs
+in inpatient youths with autism.
+DESIGN, SETTING, AND PARTICIPANTS This noninterventional prognostic study used data
+collected from March 2019 to March 2020 from 4 primary care psychiatric inpatient hospitals.
+Enrolled participants were 86 psychiatric inpatients with confirmed diagnoses of autism exhibiting
+operationally defined self-injurious behavior, emotion dysregulation, or aggression toward others; 16
+individuals were not included (18.6%) because they would not wear the biosensor (8 individuals) or
+were discharged before an observation could be made (8 individuals). Data were analyzed from
+March 2020 through October 2023.
+MAIN OUTCOMES AND MEASURES Research staff performed live behavioral coding of aggressive
+behavior while inpatient study participants wore a commercially available biosensor that recorded
+peripheral physiological signals (cardiovascular activity, electrodermal activity, and motion). Logistic
+regression, support vector machines, neural networks, and domain adaptation were used to analyze
+time-series features extracted from biosensor data. Area under the receiver operating characteristic
+curve (AUROC) values were used to evaluate the performance of population- and persondependent models.},
+    status={published},
+    html={https://jamanetwork.com/journals/jamanetworkopen/article-abstract/2813185},
+    preview={J_Imbiriba_Aggression_JAMA_2023.png},
+    status={published},
+    abbr={JAMA},
+}
+
+@inproceedings{singh2023inv,
+  title={Inv-senet: Invariant self expression network for clustering under biased data},
+  author={Singh, Ashutosh and Singh, Ashish and Masoomi, Aria and Imbiriba, Tales and Learned-Miller, Erik and Erdo{\u{g}}mu{\c{s}}, Deniz},
+  booktitle={ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={1--5},
+  renamed={Ashutosh Singh , Tales Imbiriba, Deniz Erdogmus},
+  year={2023},
+  organization={IEEE},
+  status={published},
+  html={https://ieeexplore.ieee.org/abstract/document/10094998?casa_token=WdpTY4H9IlkAAAAA:fA3xRe9xHvtaqk4FM7Z4k27gxmWWvuTfHBv6AB6iqAuIjzxRB10DZyJPa-7n7ITSuoTgMb7VXvg},
+    preview={C_Singh_InvSenet_ICASSP_2023.png},
+    abstract={Subspace clustering algorithms are used for understanding the cluster structure that explains the patterns prevalent in the dataset well. These methods are extensively used for data-exploration tasks in various areas of Natural Sciences. However, most of these methods fail to handle confounding attributes in the dataset. For datasets where a data sample represent multiple attributes, naively applying any clustering approach can result in undesired output. To this end, we propose a novel framework for jointly removing confounding attributes while learning to cluster data points in individual subspaces. Assuming we have label information about these confounding attributes, we regularize the clustering method by adversarially learning to minimize the mutual information between the data representation and the confounding attribute labels. Our experimental result on synthetic and real-world datasets demonstrate the effectiveness of our approach.},
+abbr={ICASSP},
+}
+
+@inproceedings{singh2021corr,
+    title={Variation in brain correlates of emotional experience},
+    author={Christiana Westlin*, Ashutosh Singh*,Dana H Brooks, Deniz Erdogmus, Lisa Feldman Barrett},
+    journal={Society of Affective Science},
+    renamed={Ashutosh Singh , Deniz Erdogmus},
+    year={2022},
+    booktitle={2022 Society for Affective Science Annual Conference},
+    status={published},
+    abstract={For the last several decades, emotion research has attempted to identify a "biomarker" or consistent pattern of brain activity to characterize a single category of emotion (e.g., fear) that will remain consistent across all instances of that category, regardless of individual and context. In this study, we investigated variation rather than consistency during emotional experiences while people watched video clips chosen to evoke instances of specific emotion categories. Specifically, we developed a sequential probabilistic approach to model the temporal dynamics in a participant’s brain activity during video viewing. We characterized brain states during these clips as distinct state occupancy periods between state transitions in blood oxygen level dependent (BOLD) signal patterns. We found substantial variation in the state occupancy probability distributions across individuals watching the same video, supporting the hypothesis that when it comes to the brain correlates of emotional experience, variation may indeed be the norm.},
+    preview={C_Singh_VAE_SAS_2022.png},
+    pdf={https://society-for-affective-science.org/wp-content/uploads/2023/09/2022-SAS-Program-v9.pdf},
+abbr={SAS},
+}
+
+@inproceedings{singh2021variation,
+  title={Variation is the norm: Brain state dynamics evoked by emotional video clips},
+  author={Singh, Ashutosh and Westlin, Christiana and Eisenbarth, Hedwig and Losin, Elizabeth A Reynolds and Andrews-Hanna, Jessica R and Wager, Tor D and Satpute, Ajay B and Barrett, Lisa Feldman and Brooks, Dana H and Erdogmus, Deniz},
+  renamed={Ashutosh Singh , Deniz Erdogmus},
+  booktitle={2021 43rd Annual International Conference of the IEEE Engineering in Medicine \& Biology Society (EMBC)},
+  pages={6003--6007},
+  year={2021},
+  organization={IEEE},
+  status={published},
+  preview={C_Singh_VAE_EMBC_2021.png},
+  abstract={For the last several decades, emotion research has
+attempted to identify a “biomarker” or consistent pattern of
+brain activity to characterize a single category of emotion
+(e.g., fear) that will remain consistent across all instances of
+that category, regardless of individual and context. In this
+study, we investigated variation rather than consistency during
+emotional experiences while people watched video clips chosen
+to evoke instances of specific emotion categories. Specifically,
+we developed a sequential probabilistic approach to model the
+temporal dynamics in a participant’s brain activity during video
+viewing. We characterized brain states during these clips as
+distinct state occupancy periods between state transitions in
+blood oxygen level dependent (BOLD) signal patterns. We found
+substantial variation in the state occupancy probability distributions across individuals watching the same video, supporting
+the hypothesis that when it comes to the brain correlates of
+emotional experience, variation may indeed be the norm.},
+abbr={EMBC},
 }

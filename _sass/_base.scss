@@ -1347,15 +1347,11 @@ ninja-keys::part(ninja-input-wrapper) {
 
 /* Increase font size specifically for the About page */
 /* Font Size Scaling Using clamp() to fix for phone... attempt #1 */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-#about-page .post-title {
-  font-size: clamp(1.5rem, 5vw, 3.5rem); /* Font size will scale between 2rem and 3.5rem, based on viewport width */
+#about-page .post-title,
+#about-page #recent-publications,
+#about-page #publications,
+#about-page #news {
+  font-size: clamp(1.5rem, 5vw, 3.5rem); /* Font size will scale between 1.5rem and 3.5rem, based on viewport width */
   margin: 1rem 0;
 }
 

@@ -680,13 +680,13 @@ footer.sticky-bottom {
 
 // Publications
 
-// I MICHAEL POTTER EDITED THIS margin-bottom and margin-top. IT USED TO BE 0.5rem
+// I MICHAEL POTTER EDITED ... DYNAMICALLY WANT TO SIZE TEXT AND IMAGES!!
 .publications {
   margin-top: 1.0rem;
 
   h1 {
     color: var(--global-theme-color);
-    font-size: 2rem;
+    font-size: clamp(1.0rem, 3vw, 2rem); /* Scales between 1.5rem and 2rem */
     text-align: center;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -696,7 +696,7 @@ footer.sticky-bottom {
     margin-bottom: 1rem;
 
     span {
-      font-size: 1.5rem;
+      font-size: clamp(0.5rem, 2vw, 1.5rem); /* Scales between 1rem and 1.5rem */
     }
   }
 
@@ -717,12 +717,13 @@ footer.sticky-bottom {
       margin-bottom: 1rem;
 
       .preview {
-        //transform: scale(1.);
-        transition: transform 0.3s ease;
         width: 100%;
-        min-width: 80px;
-        max-width: 2000px;
-        max-height: 200px;/* Smooth zoom animation */
+        min-width: 70px;
+        max-width: clamp(75px, 50vw, 600px); /* Scales up to 400px max */
+        max-height: clamp(50px, 30vw, 300px); /* Scales up to 200px max */
+        transition: transform 0.3s ease; /* Smooth zoom animation */
+        display: block;
+        margin: 0 auto; // Centers the image horizontally
       }
 
       .abbr {
@@ -735,7 +736,6 @@ footer.sticky-bottom {
 
           a {
             color: white;
-
             &:hover {
               text-decoration: none;
             }
@@ -750,9 +750,16 @@ footer.sticky-bottom {
 
       .title {
         font-weight: bolder;
+        font-size: clamp(0.75rem, 2vw, 1.25rem); /* Scales title size */
+      }
+
+      .periodical{
+        font-size: clamp(0.5rem, 2vw, 1.5rem); // Responsive font size for periodical text
       }
 
       .author {
+        font-size: clamp(0.5rem, 2vw, 1.5rem); // Responsive font size for author text
+
         a {
           border-bottom: 1px dashed var(--global-theme-color);
 
@@ -768,6 +775,7 @@ footer.sticky-bottom {
         }
 
         > span.more-authors {
+          font-size: inherit; // Inherit from `.author` to match the same font size
           color: var(--global-text-color-light);
           border-bottom: 1px dashed var(--global-text-color-light);
           cursor: pointer;
@@ -779,14 +787,12 @@ footer.sticky-bottom {
         }
       }
 
+
       .links {
         a.btn {
           color: var(--global-text-color);
           border: 1px solid var(--global-text-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
-          padding-top: 0.25rem;
-          padding-bottom: 0.25rem;
+          padding: clamp(0.25rem, 0.5vw, 0.5rem) clamp(0.5rem, 1vw, 1rem); /* Scales padding */
           margin-left: 0;
 
           &:hover {
@@ -815,14 +821,10 @@ footer.sticky-bottom {
       }
 
       .hidden {
-        font-size: 0.875rem;
+        font-size: clamp(0.575rem, 1vw, 0.875rem); /* Scales hidden text size */
         max-height: 0px;
         overflow: hidden;
         text-align: justify;
-        transition-property: 0.15s ease;
-        -moz-transition: 0.15s ease;
-        -ms-transition: 0.15s ease;
-        -o-transition: 0.15s ease;
         transition: all 0.15s ease;
 
         p {
@@ -839,11 +841,6 @@ footer.sticky-bottom {
 
       .hidden.open {
         max-height: 100em;
-        transition-property: 0.15s ease;
-        -moz-transition: 0.15s ease;
-        -ms-transition: 0.15s ease;
-        -o-transition: 0.15s ease;
-        transition: all 0.15s ease;
       }
 
       div.abstract.hidden {
@@ -854,14 +851,17 @@ footer.sticky-bottom {
         border-color: var(--global-text-color);
       }
     }
+
     div.award.hidden {
       border: dashed 1px var(--global-bg-color);
     }
+
     div.award.hidden.open {
       border-color: var(--global-highlight-color);
     }
   }
 }
+
 
 // Rouge Color Customization
 //figure.highlight {
@@ -1400,15 +1400,15 @@ ninja-keys::part(ninja-input-wrapper) {
   text-align: center; /* Ensures the content is centered */
 
   .profile-pic {
-    width: clamp(50px, 10vw, 100px);  /* Width will scale between 50px and 100px, based on viewport width */
-    height: clamp(50px, 10vw, 100px); /* Height will scale between 50px and 100px, maintaining the aspect ratio */
+    width: clamp(50px, 10vw, 70px);  /* Width will scale between 50px and 100px, based on viewport width */
+    height: clamp(50px, 10vw, 70px); /* Height will scale between 50px and 100px, maintaining the aspect ratio */
     object-fit: cover; /* Ensures the image covers the space without distorting */
     border-radius: 50%; /* Makes the profile picture circular */
     margin-top: 1rem; /* Margin above the image */
   }
 
   .mt-1 {
-    font-size: clamp(1.2rem, 4vw, 2rem); /* Font size will scale between 1.2rem and 2rem, based on viewport width */
+    font-size: clamp(1.0rem, 4vw, 1.5rem); /* Font size will scale between 1.2rem and 2rem, based on viewport width */
     margin-top: 1rem; /* Adds space between profile pic and username */
   }
 }

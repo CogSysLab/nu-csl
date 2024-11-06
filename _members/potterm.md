@@ -7,7 +7,7 @@ group_rank: 4
 title: Michael Potter
 description: Profile of  Michael Potter,  M.Sc, PhD student at the Cognitive Systems Lab
 lastname: Potter
-publications: 'author^=*Potter'
+publications: 'author^=*Potter || author^=*Michael Potter || renamed^=*Michael Potter'
 
 teaser: >
     I am a PhD student interested in Bayesian statistics, time-to-event modeling, and physics-based deep learning. A fun fact about me is that I am a professional juggler (I can juggle anything).
@@ -21,6 +21,7 @@ profile:
     orcid: 0000-0002-0378-1178
     scholar: https://scholar.google.com/citations?user=fwYsaRUAAAAJ&hl=en
     github: mlpotter
+    website: https://www.linkedin.com/in/michael-lynn-potter/
     address: >
         College of Engineering <br />
         EXP 760 <br />

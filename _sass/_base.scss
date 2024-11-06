@@ -221,13 +221,20 @@ ul.task-list input[type="checkbox"] {
 
 @media (min-width: 576px) {
   .profile {
-    width: 30%;
+    width: 30%; /* Set width for larger screens */
 
     .address {
       p {
-        display: block;
+        display: block; /* Make address paragraph display as a block */
       }
     }
+  }
+}
+
+/* Separate media query for smaller screens below 576px */
+@media (max-width: 575px) {
+  .profile {
+    margin: 0.5rem; /* Reduce margin for smaller screens (below 576px) */
   }
 }
 
@@ -1339,8 +1346,17 @@ ninja-keys::part(ninja-input-wrapper) {
 }
 
 /* Increase font size specifically for the About page */
+/* Font Size Scaling Using clamp() to fix for phone... attempt #1 */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 #about-page .post-title {
-    font-size: 3.2em; /* Adjust title font size as needed */
+  font-size: clamp(1.5rem, 5vw, 3.5rem); /* Font size will scale between 2rem and 3.5rem, based on viewport width */
+  margin: 1rem 0;
 }
 
 #about-page p,
@@ -1348,36 +1364,37 @@ ninja-keys::part(ninja-input-wrapper) {
 #about-page th,
 #about-page .post-description,
 #about-page .contact-note,
-#about-page .publications{
-  font-size: 1.5em; /* Adjust main content font size */
-  // line-height: 1.6; /* Optional: Increase line-height for readability */
+#about-page .publications {
+  font-size: clamp(1rem, 3vw, 1.5rem); /* Font size will scale between 1rem and 1.5rem */
+  margin: 1rem 0;
 }
 
+#about-page #news table {
+  width: 100%;
+  overflow-x: auto;
+  margin: 0;
+}
+
+#about-page #news table th,
+#about-page #news table td {
+  padding: 0.5rem;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+/* Dynamically adjust max-width only for the About page */
+#about-page .container,
+#about-page .site {
+  max-width: clamp(70%, 90%, 100%) !important; /* Override the max-width from _config.yml for about page */
+  margin: 0 auto; /* Center the page */
+}
+
+/* Optional: Adjust the about page specifically */
 #about-page {
-  #news {
-    font-size: 2.5em; /* Adjust the font size for the news section */
-
-    /* news css adjustments (for news.html) */
-    margin: 0; /* Remove margin around the news section */
-
-    table {
-      width: 100%; /* Ensure table takes full width */
-      border-collapse: collapse; /* Remove gaps between cells */
-
-      th, td {
-        padding: 0.25rem 0.5rem; /* Adjust padding to minimize space */
-        vertical-align: top; /* Aligns content to the top */
-        margin: 0; /* Ensure no margin */
-      }
-
-      th {
-        font-weight: bold; /* Keep header bold */
-        width: 20%; /* Adjust width of th to allow space for td */
-      }
-
-      td {
-        width: 80%; /* Adjust width of td to balance layout */
-      }
-    }
-  }
+  margin: 0 auto;
 }
+//
+//.about-container, .site {
+//  max-width: clamp(70%, 90%, 100%) !important; /* Override max-width from _config.yml */
+//  margin: 0 auto; /* Center the page */
+//}

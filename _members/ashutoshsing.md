@@ -21,7 +21,6 @@ profile:
     linkedin: ashutosh-singh-8b034070
     website: https://ashutosh17dec.github.io
     scholar: https://scholar.google.com/citations?user=t2mczyYAAAAJ&hl=en
-    website: https://ashutosh17dec.github.io
     address: >
         College of Engineering<br />
         EXP 760 <br />

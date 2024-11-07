@@ -1400,15 +1400,15 @@ ninja-keys::part(ninja-input-wrapper) {
   text-align: center; /* Ensures the content is centered */
 
   .profile-pic {
-    width: clamp(50px, 10vw, 70px);  /* Width will scale between 50px and 100px, based on viewport width */
-    height: clamp(50px, 10vw, 70px); /* Height will scale between 50px and 100px, maintaining the aspect ratio */
+    width: clamp(20px, 10vw, 70px);  /* Width will scale between 50px and 100px, based on viewport width */
+    height: clamp(20px, 10vw, 70px); /* Height will scale between 50px and 100px, maintaining the aspect ratio */
     object-fit: cover; /* Ensures the image covers the space without distorting */
     border-radius: 50%; /* Makes the profile picture circular */
     margin-top: 1rem; /* Margin above the image */
   }
 
-  .mt-1 {
-    font-size: clamp(1.0rem, 4vw, 1.5rem); /* Font size will scale between 1.2rem and 2rem, based on viewport width */
+  .profile-username {
+    font-size: clamp(0.15rem, 2vw, 1.5rem); /* Font size will scale between 1.2rem and 2rem, based on viewport width */
     margin-top: 1rem; /* Adds space between profile pic and username */
   }
 }

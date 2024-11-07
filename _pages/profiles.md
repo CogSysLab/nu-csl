@@ -14,7 +14,7 @@ nav_order: 7
 
 {% if group != "Alumni" %}
 
-## {{ group }}
+<h2 style="font-size: clamp(1.5rem, 4vw, 2.5rem);">{{ group }}</h2> <!-- Dynamic title font size -->
 
     {% assign members = site.members | sort: "lastname" | where: "group", group %}
     {% for member in members %}
@@ -31,12 +31,12 @@ nav_order: 7
 
 
 
-## Alumni
+<h2 style="font-size: clamp(1.5rem, 4vw, 2.5rem);">Alumni</h2> <!-- Dynamic title font size -->
 {% assign members = site.members | sort: "lastname" | where: "group", "Alumni" %}
 
-<div class="alumni-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 10px;">
+<div class="alumni-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 10px; flex-direction: row;">
     {% for member in members %}
-    <div class="alumni-item" style="flex: 0 1 200px; max-width: 70%; text-align: center; margin: 10px;">
+    <div class="alumni-item" style="flex: 0 1 200px; max-width: 70%; text-align: center; margin: 10px; flex-direction: row;">
         <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
             {% include profiles/past_member.html member=member %} <!-- Include the past member card here -->
         </div>

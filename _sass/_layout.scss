@@ -17,6 +17,36 @@ body {
   }
 }
 
+/* Base header styling with dynamic font sizes */
+h1, h2, h3, h4, h5, h6 {
+  margin: 1rem 0; /* Optional margin adjustment */
+}
+
+h1 {
+  font-size: clamp(1.5rem, 5vw, 3.5rem); /* Dynamically adjusts between 1.5rem and 3.5rem */
+}
+
+h2 {
+  font-size: clamp(1.25rem, 4vw, 3rem); /* Dynamically adjusts between 1.25rem and 3rem */
+}
+
+h3 {
+  font-size: clamp(1rem, 3.5vw, 2.5rem); /* Dynamically adjusts between 1rem and 2.5rem */
+}
+
+h4 {
+  font-size: clamp(0.875rem, 3vw, 2rem); /* Dynamically adjusts between 0.875rem and 2rem */
+}
+
+h5 {
+  font-size: clamp(0.75rem, 2.5vw, 1.5rem); /* Dynamically adjusts between 0.75rem and 1.5rem */
+}
+
+h6 {
+  font-size: clamp(0.625rem, 2vw, 1rem); /* Dynamically adjusts between 0.625rem and 1rem */
+}
+
+
 body.fixed-top-nav {
   // Add some padding for the nav-bar.
   padding-top: 56px;

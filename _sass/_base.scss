@@ -166,26 +166,70 @@ ul.task-list input[type="checkbox"] {
 }
 
 // Card
-
+/* Custom card styling for responsive sizing */
 .card {
   background-color: var(--global-card-bg-color);
+  padding-left: clamp(0.00rem, 1vw, 0.5rem); /* Reduced responsive left padding */
+  padding-right: clamp(0.00rem, 1vw, 0.5rem); /* Reduced responsive right padding */
 
   .card-img {
-    width: 100%;
+    width: clamp(100px, 10vw, 240px); /* Responsive image width */
     height: auto;
-    padding-bottom: 0rem;
-    border-radius: 50%; /* Makes the image circular */
+    border-radius: clamp(20%, 50%, 70%); /* this doesnt work ... Dynamically adjusts the circular shape */
     object-fit: cover; /* Ensures the image fills the circular frame */
+    max-width: 100%;
+    padding-left: 0; /* Reduced responsive left padding */
+    padding-right: 0;
+  }
+
+  /* For smaller screens (adjusts margin and border-radius) */
+  @media (max-width: 600px) {
+    .card-img {
+      margin-left: 0; /* Removes left margin */
+      margin-right: 0; /* Removes right margin */
+      border-radius: 50%; /* Perfect circle on smaller screens */
+    }
   }
 
   .card-title {
     color: var(--global-text-color);
+    font-size: clamp(1rem, 2.5vw, 1.5rem); /* Responsive font size */
   }
 
+  // Card body styling
   .card-body {
-    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+    padding: clamp(0.01rem, 1vw, 0.75rem); /* Responsive left padding */
+
+    .card-title {
+      color: var(--global-text-color); /* Primary text color */
+      font-size: clamp(0.8rem, 2.5vw, 1.5rem); /* Responsive font size */
+      margin-bottom: 0.5rem; /* Space below title */
+    }
+
+    .card-subtitle {
+      color: var(--global-muted-text-color, #6c757d); /* Muted text color */
+      font-size: clamp(0.8rem, 2vw, 1.25rem); /* Responsive font size */
+      margin-bottom: 0.5rem; /* Space below subtitle */
+    }
+
+    .card-text {
+      color: var(--global-secondary-text-color); /* Secondary text color */
+      font-size: clamp(0.675rem, 1.5vw, 1rem); /* Responsive font size */
+      line-height: 1.4; /* Line height for readability */
+      margin-bottom: 0.8rem; /* Space below text */
+    }
+
+    // Link styling
+    a {
+      text-decoration: none; /* Remove underline */
+      color: inherit; /* Inherit color from text */
+      &:hover {
+        color: var(--global-link-hover-color, #007bff); /* Change color on hover */
+      }
+    }
   }
 }
+
 
 // Citation
 
@@ -1411,4 +1455,18 @@ ninja-keys::part(ninja-input-wrapper) {
     font-size: clamp(0.15rem, 2vw, 1.5rem); /* Font size will scale between 1.2rem and 2rem, based on viewport width */
     margin-top: 1rem; /* Adds space between profile pic and username */
   }
+}
+
+.post-title {
+  font-size: clamp(1.5rem, 5vw, 3.5rem); /* Font size will scale between 1.5rem and 3.5rem, based on viewport width */
+  margin: 1rem 0;
+}
+
+/* past member profile */
+
+/* Ensure heading elements inherit universal font size styles */
+.past-member h5,
+.past-member h6 {
+  font-size: inherit;  /* Inherits font size from global h1, h2, etc. styles */
+  margin: inherit;     /* Inherit margin values from global h1, h2, etc. styles */
 }

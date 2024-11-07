@@ -1,10 +1,10 @@
 <div class="past-member" style="text-align: center;">
-    <h5 class="center-text" style="color: var(--global-theme-color); font-size: 2.2em;"> <!-- Increased font size -->
+    <h5 class="center-text" style="color: var(--global-theme-color);"> <!-- Increased font size -->
         {%- if member.profile.website -%}
             <a href="{{ member.profile.website }}" style="color: inherit;">{{ member.profile.name }}</a>
         {%- else -%}
             {{ member.profile.name }}
         {%- endif -%}
     </h5>
-    <h6 class="center-text" style="color: black; font-size: 1.8em;">{{ member.company }}</h6> <!-- Adjusted to a larger size -->
+    <h6 class="center-text" style="color: black;">{{ member.company }}</h6> <!-- Adjusted to a larger size -->
 </div>

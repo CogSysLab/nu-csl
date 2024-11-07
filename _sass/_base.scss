@@ -754,11 +754,11 @@ footer.sticky-bottom {
       }
 
       .periodical{
-        font-size: clamp(0.5rem, 2vw, 1.5rem); // Responsive font size for periodical text
+        font-size: clamp(0.65rem, 2vw, 1.5rem); // Responsive font size for periodical text
       }
 
       .author {
-        font-size: clamp(0.5rem, 2vw, 1.5rem); // Responsive font size for author text
+        font-size: clamp(0.65rem, 2vw, 1.5rem); // Responsive font size for author text
 
         a {
           border-bottom: 1px dashed var(--global-theme-color);

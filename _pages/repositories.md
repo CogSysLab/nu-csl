@@ -5,6 +5,7 @@ title: Code
 description: Edit the `_data/repositories.yml` and change the `github_users`, `github_organizations`, and `github_repos` lists to include your own GitHub profile and repositories.
 nav: true
 nav_order: 4
+hide_title: true
 ---
 
 {% if site.data.repositories.github_users %}

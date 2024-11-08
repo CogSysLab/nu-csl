@@ -5,6 +5,7 @@ title: Team
 description: Members and close collaborators of the group.
 nav: true
 nav_order: 7
+hide_title: true
 ---
 <p style="font-size: 1em;">Click on any of the lab members to get more information!.</p>
 
@@ -36,7 +37,7 @@ nav_order: 7
 
 <div class="alumni-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 10px; flex-direction: row;">
     {% for member in members %}
-    <div class="alumni-item" style="flex: 0 1 200px; max-width: 70%; text-align: center; margin: 10px; flex-direction: row;">
+    <div class="alumni-item" style="flex: 0 1 200px; max-width: 100%; text-align: center; margin: 10px; flex-direction: row;">
         <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
             {% include profiles/past_member.html member=member %} <!-- Include the past member card here -->
         </div>

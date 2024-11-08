@@ -191,10 +191,10 @@ ul.task-list input[type="checkbox"] {
     }
   }
 
-  .card-title {
-    color: var(--global-text-color);
-    font-size: clamp(1rem, 2.5vw, 1.5rem); /* Responsive font size */
-  }
+    .card-title {
+      color: var(--global-text-color);
+      font-size: clamp(1rem, 2.5vw, 1.5rem); /* Responsive font size */
+    }
 
   // Card body styling
   .card-body {
@@ -384,7 +384,7 @@ ul.task-list input[type="checkbox"] {
 .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
     padding: 12px 20px; /* Adjust padding for larger buttons */
-    font-size: clamp(0.8rem, 2.5vw, 2.5rem); /* Font size will scale between 1.5rem and 2.5rem, based on viewport width */
+    font-size: clamp(0.8rem, 2.5vw, 1.5rem); /* Font size will scale between 1.5rem and 2.5rem, based on viewport width */
     transition: background-color 0.2s ease; /* Optional: smooth transition */
 }
 
@@ -764,7 +764,7 @@ footer.sticky-bottom {
         width: 100%;
         min-width: 70px;
         max-width: clamp(75px, 50vw, 600px); /* Scales up to 400px max */
-        max-height: clamp(50px, 30vw, 300px); /* Scales up to 200px max */
+        max-height: clamp(50px, 30vw, 200px); /* Scales up to 200px max */
         transition: transform 0.3s ease; /* Smooth zoom animation */
         display: block;
         margin: 0 auto; // Centers the image horizontally
@@ -798,11 +798,11 @@ footer.sticky-bottom {
       }
 
       .periodical{
-        font-size: clamp(0.65rem, 2vw, 1.5rem); // Responsive font size for periodical text
+        font-size: clamp(0.65rem, 2vw, 1.0rem); // Responsive font size for periodical text
       }
 
       .author {
-        font-size: clamp(0.65rem, 2vw, 1.5rem); // Responsive font size for author text
+        font-size: clamp(0.65rem, 2vw, 1.0rem); // Responsive font size for author text
 
         a {
           border-bottom: 1px dashed var(--global-theme-color);
@@ -836,7 +836,7 @@ footer.sticky-bottom {
         a.btn {
           color: var(--global-text-color);
           border: 1px solid var(--global-text-color);
-          padding: clamp(0.25rem, 0.5vw, 0.5rem) clamp(0.5rem, 1vw, 1rem); /* Scales padding */
+          padding: clamp(0.05rem, 0.3vw, 0.2rem) clamp(0.1rem, 1vw, 1rem); /* Scales padding */
           margin-left: 0;
 
           &:hover {
@@ -1395,7 +1395,7 @@ ninja-keys::part(ninja-input-wrapper) {
 #about-page #recent-publications,
 #about-page #publications,
 #about-page #news {
-  font-size: clamp(1.5rem, 5vw, 3.5rem); /* Font size will scale between 1.5rem and 3.5rem, based on viewport width */
+  font-size: clamp(1.5rem, 5vw, 2.5rem); /* Font size will scale between 1.5rem and 3.5rem, based on viewport width */
   margin: 1rem 0;
 }
 
@@ -1458,7 +1458,7 @@ ninja-keys::part(ninja-input-wrapper) {
 }
 
 .post-title {
-  font-size: clamp(1.5rem, 5vw, 3.5rem); /* Font size will scale between 1.5rem and 3.5rem, based on viewport width */
+  font-size: clamp(1.5rem, 5vw, 2.5rem); /* Font size will scale between 1.5rem and 3.5rem, based on viewport width */
   margin: 1rem 0;
 }
 

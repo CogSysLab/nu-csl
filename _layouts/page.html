@@ -5,7 +5,9 @@ layout: default
 
   <header class="post-header">
     {% include social_header.html %}
-    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.hide_title != true %}
+      <h1 class="post-title">{{ page.title }}</h1>
+    {% endif %}
     {% comment %}<p class="post-description">{{ page.description }}</p>{% endcomment %}
   </header>
 

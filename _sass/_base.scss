@@ -1467,6 +1467,25 @@ ninja-keys::part(ninja-input-wrapper) {
 /* Ensure heading elements inherit universal font size styles */
 .past-member h5,
 .past-member h6 {
-  font-size: inherit;  /* Inherits font size from global h1, h2, etc. styles */
-  margin: inherit;     /* Inherit margin values from global h1, h2, etc. styles */
+  font-size: 0.8rem;  /* Inherit font size from global heading styles */
+  margin: inherit;     /* Inherit margin values from global heading styles */
+}
+
+.past-member .card-img {
+  height: clamp(50px, 10vw, 120px); /* Responsive image width */
+  width: auto;
+  border-radius: 50%; /* Circular shape */
+  object-fit: cover; /* Ensures the image fills the circular frame */
+  max-width: 100%;
+  padding-left: 0; /* Removes responsive left padding */
+  padding-right: 0;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+  .past-member .card-img {
+    margin-left: 0; /* Centers the image horizontally */
+    margin-right: 0;
+    border-radius: 50%; /* Keeps the circular shape */
+  }
 }

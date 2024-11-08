@@ -1,4 +1,7 @@
 <div class="past-member" style="text-align: center;">
+    {% if member.profile.image %}
+        <img src="{{ '/assets/img/' | append: member.profile.image | relative_url }}" alt="{{ member.profile.name }}"  class="card-img img-fluid">
+    {% endif %}
     <h5 class="center-text" style="color: var(--global-theme-color);"> <!-- Increased font size -->
         {%- if member.profile.website -%}
             <a href="{{ member.profile.website }}" style="color: inherit;">{{ member.profile.name }}</a>

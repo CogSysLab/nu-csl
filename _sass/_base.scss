@@ -1489,3 +1489,25 @@ ninja-keys::part(ninja-input-wrapper) {
     border-radius: 50%; /* Keeps the circular shape */
   }
 }
+/* main.scss or custom-header.scss */
+/* assets/css/main.scss or another global CSS file */
+/* assets/css/main.scss or another global SCSS file */
+
+/* assets/css/main.scss or another global SCSS file */
+
+.header-background {
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating the image */
+  width: 100vw; /* Full width of the viewport */
+  height: 30vh; /* Set the height of the header background (adjust as needed) */
+  margin-top: 0; /* Optional: Adjust if you need some gap between the top of the page */
+  position: relative; /* Ensure it behaves like a normal block element in the flow */
+}
+
+.page-content {
+  width: 100%; /* Ensures the content spans full width */
+  max-width: 1200px; /* Optional: Set a maximum width for the content to avoid it becoming too wide */
+  margin: 0 auto; /* Centers the content */
+  padding: 20px; /* Optional padding for the content */
+}

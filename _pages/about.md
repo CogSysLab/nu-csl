@@ -6,7 +6,7 @@ permalink: /
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
-header-background-image: "{{ site.baseurl }}/assets/img/header/isec.jpg"
+header-background-image: "{{ site.baseurl }}{{ site.url }}/assets/img/header/isec.jpg"
 ---
 <!-- Carousel Structure -->
 {% assign gallery = "gallery" %}

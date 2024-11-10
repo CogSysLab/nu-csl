@@ -23,7 +23,6 @@
 
     {% if page.header-background-image %}
         <div class="header-background" style="background-image: url('{{ page.header-background-image | relative_url }}');"></div>
-        <p> url('{{ page.header-background-image | relative_url }}') </p>
     {% endif %}
 
     <!-- Content -->
@@ -52,6 +51,11 @@
         {{ content }}
       {% endif %}
     </div>
+
+    {% if page.social %}
+     {% include social.html %}
+    {% endif %}
+
 
     <!-- Footer -->
     {% include footer.liquid %}

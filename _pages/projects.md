@@ -8,6 +8,7 @@ nav_order: 3
 display_categories: [work, fun]
 horizontal: false
 hide_title: true
+social: true
 ---
 
 <!-- pages/projects.md -->

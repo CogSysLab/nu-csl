@@ -6,7 +6,8 @@ description: Edit the `_data/repositories.yml` and change the `github_users`, `g
 nav: true
 nav_order: 4
 hide_title: true
-header-background-image: "{{ site.baseurl }}/assets/img/header/codebackground.jpg"
+header-background-image: "/assets/img/header/codebackground.jpg"
+social: true
 ---
 
 {% if site.data.repositories.github_users %}

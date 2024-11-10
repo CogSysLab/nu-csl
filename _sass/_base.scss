@@ -446,22 +446,35 @@ ul.task-list input[type="checkbox"] {
 }
 
 // Social (bottom)
-
 .social {
+  background-color: var(--global-theme-color); /* Background color matches the theme */
+  width: 100vw; /* Full width of the viewport */
+  height: 5vh; /* Adjust height as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff; /* White text for readability */
   text-align: center;
+  position: relative;
+  z-index: -1; /* Places the background behind other elements */
+  margin-top: 0;
+  padding: 0 0;
 
   .contact-icons {
-    font-size: 4rem;
+    font-size:  16rem; /* clamp(5.5rem, 0.5vw, 8rem); */
+    display: flex;
+    gap: 3rem;
 
     a {
       i::before {
-        color: var(--global-text-color);
-        transition-property: all 0.2s ease-in-out;
+        color: #fff;
+        transition: all 0.2s ease-in-out;
       }
 
       &:hover {
         i::before {
-          color: var(--global-theme-color);
+          color: var(--global-text-color); /* Changes color on hover */
         }
       }
     }
@@ -469,6 +482,8 @@ ul.task-list input[type="checkbox"] {
 
   .contact-note {
     font-size: 0.8rem;
+    margin-top: 0px;
+    color: #fff;
   }
 }
 

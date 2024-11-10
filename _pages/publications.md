@@ -6,7 +6,8 @@ description: publications by categories in reversed chronological order. generat
 nav: true
 nav_order: 2
 hide_title: true
-header-background-image: "{{ site.baseurl }}/assets/img/header/writingbackground.jpg"
+header-background-image: "/assets/img/header/writingbackground.jpg"
+social: true
 ---
 
 <!-- _pages/publications.md -->

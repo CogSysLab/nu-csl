@@ -6,7 +6,7 @@ description: Members and close collaborators of the group.
 nav: true
 nav_order: 7
 hide_title: true
-header-background-image: "/assets/img/header/teambackground.png"
+header-background-image: "{{ site.baseurl }}/assets/img/header/teambackground.png"
 ---
 <p style="font-size: 1em;">Click on any of the lab members to get more information!.</p>
 

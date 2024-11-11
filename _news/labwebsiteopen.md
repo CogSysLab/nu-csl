@@ -6,9 +6,10 @@ inline: false
 related_posts: false
 ---
 
-We are happy to announce that the Northeastern University Cognitive Systems Lab now has a public website! We hope that everyone can enjoy the research that we will share with the world. If you want to know where the lab all started, check out the video below 😊
+<h3> We are happy to announce that the Northeastern University Cognitive Systems Lab now has a public website! We hope that everyone can enjoy the research that we will share with the world. If you want to know where the lab all started, check out the video below 😊 </h3>
 
 ---
+{% comment %}
 {% include figure.liquid
   loading="eager"
   path="/assets/img/news/denizbrainhelmet.jpg"
@@ -17,6 +18,12 @@ We are happy to announce that the Northeastern University Cognitive Systems Lab 
   class="preview z-depth-1 rounded center-image"
   zoomable=true
   caption="Deniz's brain helmet from his red carpet appearance"
+%}
+{% endcomment %}
+
+{% include youtube_embed.html 
+  youtubecode="Rm2hcVpWKj8" 
+  caption="Deniz Erdogmus speaking at the Northeastern University Red Carpet" 
 %}
 
 <style>

@@ -1014,7 +1014,7 @@ html.transition *:after {
 
   .post-tags {
     color: var(--global-text-color-light);
-    font-size: 0.875rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
     padding-top: 0.25rem;
     padding-bottom: 1rem;
 

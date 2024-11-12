@@ -7,7 +7,7 @@ group_rank: 4
 title: Basak Celik
 description: Profile of Basak Celik, PhD candidate at the Cognitive Systems Lab
 lastname: Celik
-publications: 'author^=*Basak Celik'
+publications: 'author^=*Basak Celik || renamed^=*Basak Celik || author^=*Celik'
 
 teaser: >
     I am a PhD candidate, working on developing machine learning algorithms for brain (EEG) and muscle signals (EMG). My main research interests are: self-supervised learning with EEG & EMG, real-time gesture recognition and multi-label classification, multimodal sensory fusion for Brain-Computer Interfaces. I also love playing guitar and piano!

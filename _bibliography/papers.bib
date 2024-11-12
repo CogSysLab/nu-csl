@@ -67,7 +67,7 @@ Code will be made publicly available upon acceptance.},
   html=https://arxiv.org/abs/2311.11931,
   year={2023},
   status={under review},
-  abbr={TMLR},
+  abbr={TIP},
 }
 
 @article{akbar2024advancing,
@@ -257,7 +257,7 @@ abbr={EMBC},
     abstract={We designed and tested a system for real-time control of a user interface by extracting surface electromyographic (sEMG) activity from eight electrodes in a wristband configuration. sEMG data were streamed into a machine-learning algorithm that classified hand gestures in real-time. After an initial model calibration, participants were presented with one of three types of feedback during a human-learning stage: veridical feedback, in which predicted probabilities from the gesture classification algorithm were displayed without alteration; modified feedback, in which we applied a hidden augmentation of error to these probabilities; and no feedback. User performance was then evaluated in a series of minigames, in which subjects were required to use eight gestures to manipulate their game avatar to complete a task. Experimental results indicated that relative to the baseline, the modified feedback condition led to significantly improved accuracy. Class separation also improved, though this trend was not significant. These findings suggest that real-time feedback in a gamified user interface with manipulation of feedback may enable intuitive, rapid, and accurate task acquisition for sEMG-based gesture recognition applications.},
     abbr={TNSRE},
     html={https://pubmed.ncbi.nlm.nih.gov/38427549/},
-    renamed={Basak Celik , Deniz Erdogmus , Yunus Bicer},
+    renamed={Basak Celik , Deniz Erdogmus , Yunus Bicer, Elifnur Sunger},
 }
 @inproceedings{smedemark2023recursive,
   title={Recursive Estimation of User Intent From Noninvasive Electroencephalography Using Discriminative Models},
@@ -273,4 +273,34 @@ abbr={EMBC},
     abbr={ICASSP},
     selected={true},
     renamed={Basak Celik , Deniz Erdogmus , Niklas Smedemark-Margulies},
+}
+
+@article{smedemarkfast,
+  title={Fast and Expressive Gesture Recognition using a Combination-Homomorphic Electromyogram Encoder},
+  author={Smedemark-Margulies, Niklas and Bicer, Yunus and Sunger, Elifnur and Imbiriba, Tales and Tunik, Eugene and Erdogmus, Deniz and Yarossi, Mathew and Walters, Robin},
+  journal={Transactions on Machine Learning Research}
+  renamed   = {Niklas Smedemark-Margulies, Yunus Bicer, Elifnur Sunger, Deniz Erdogmus}, 
+  preview   = {J_Smedemark-Margulies_CombinationHomomorphicEMGEncoder_TMLR_2024.jpg}, 
+  abstract  = {We study the task of gesture recognition from electromyography (EMG), with the goal of
+enabling expressive human-computer interaction at high accuracy, while minimizing the
+time required for new subjects to provide calibration data. To fulfill these goals, we define
+combination gestures consisting of a direction component and a modifier component. New
+subjects only demonstrate the single component gestures and we seek to extrapolate from
+these to all possible single or combination gestures. We extrapolate to unseen combination
+gestures by combining the feature vectors of real single gestures to produce synthetic training
+data. This strategy allows us to provide a large and flexible gesture vocabulary, while not
+requiring new subjects to demonstrate combinatorially many example gestures. We pre-train
+an encoder and a combination operator using self-supervision, so that we can produce useful
+synthetic training data for unseen test subjects. To evaluate the proposed method, we collect
+and release a real-world EMG dataset, and measure the effect of augmented supervision
+against two baselines: a partially-supervised model trained with only single gesture data
+from the unseen subject, and a fully-supervised model trained with real single and real
+combination gesture data from the unseen subject. We find that the proposed method
+provides a dramatic improvement over the partially-supervised model, and achieves a useful
+classification accuracy that in some cases approaches the performance of the fully-supervised
+model.},
+  html      = {https://arxiv.org/pdf/2311.14675},
+  status    = {published}, # published , arxiv , submitted
+  selected  = {true}, # true / false. If true, displays the paper on the about page of the website AND the publications page
+  abbr      = {TMLR}, # Abbreviation for the journal / venue
 }

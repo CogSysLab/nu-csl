@@ -15,7 +15,7 @@ profile:
     name: Basak Celik
     position:
     align: right
-    image: profile_pictures/celikb.jpg
+    image: profile_pictures/celikb.JPG
     email: celik.b@northeastern.edu
     linkedin: celikbasak
     orcid: 0000-0002-0912-5243

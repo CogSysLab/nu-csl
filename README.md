@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Preview](readme_preview/CSLlogo.png)](https://cogsyslab.github.io/neu-csl/)
+[![Preview](readme_preview/CSLlogo.png)](https://cogsyslab.github.io/nu-csl/)
 
 **A simple, clean, and response [Jekyll](https://jekyllrb.com/) website for the Cognitive Systems Lab**
 ---
@@ -12,8 +12,8 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/alshedivat/al-folio.svg)](https://github.com/alshedivat/al-folio/graphs/contributors/)
 
 [![GitHub license](https://img.shields.io/github/license/alshedivat/al-folio?color=blue)](https://github.com/alshedivat/al-folio/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/CogSysLab/neu-csl)](https://github.com/CogSysLab/neu-csl)
-[![GitHub forks](https://img.shields.io/github/forks/CogSysLab/neu-csl)](https://github.com/CogSysLab/neu-csl)
+[![GitHub stars](https://img.shields.io/github/stars/CogSysLab/nu-csl)](https://github.com/CogSysLab/nu-csl)
+[![GitHub forks](https://img.shields.io/github/forks/CogSysLab/nu-csl)](https://github.com/CogSysLab/nu-csl)
 
 </div>
 
@@ -87,10 +87,10 @@ Michael Potter is a Ph.D candidate ... # Profile description(or whatever markdow
 3. Save your profile picture to the `img\profile_pictures` directory. Try to make it as close as possibly to equal width and height dimension.
 
 **Profile preview card**  
-[![People Preview](readme_preview/people_card.png)](https://cogsyslab.github.io/neu-csl/people)
+[![People Preview](readme_preview/people_card.png)](https://cogsyslab.github.io/nu-csl/people)
 
 **Full profile displayed when clicking on the profile preview card**  
-[![People Profile Preview](readme_preview/people_profile.png)](https://cogsyslab.github.io/neu-csl/people)
+[![People Profile Preview](readme_preview/people_profile.png)](https://cogsyslab.github.io/nu-csl/people)
 
 ---
 
@@ -118,7 +118,7 @@ abbr      = {TAES}, # Abbreviation for the journal / venue
 3. Add a preview image of the paper to the `img\publication_preview` directory. 
 Save the image using the SPIRAL naming conventions found in the [SPIRAL handbook](https://github.com/neu-spiral/SPIRAL-Handbook/wiki/writing-papers#package-naming-conventions).
 
-[![Publications Preview](readme_preview/publications.png)](https://cogsyslab.github.io/neu-csl/publications/)
+[![Publications Preview](readme_preview/publications.png)](https://cogsyslab.github.io/nu-csl/publications/)
 
 
 ---
@@ -127,7 +127,7 @@ Save the image using the SPIRAL naming conventions found in the [SPIRAL handbook
 
 We display GitHub repositories and user profiles on the `/repositories/` page.
 
-[![Repositories Preview](readme_preview/repositories.png)](https://cogsyslab.github.io/neu-csl/repositories/)
+[![Repositories Preview](readme_preview/repositories.png)](https://cogsyslab.github.io/nu-csl/repositories/)
 
 Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories to the `/repositories/` page. 
 

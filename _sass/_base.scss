@@ -1565,7 +1565,6 @@ ninja-keys::part(ninja-input-wrapper) {
 }
 
 #imageCarousel .carousel-item img {
-    height: clamp(250px, 30vw, 650px); /* Adjust the height as needed */
+    height: clamp(250px, 50vw, 650px); /* Adjust the height as needed */
     width: 100%; /* Responsive image width */
-    object-fit: cover;
 }

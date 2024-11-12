@@ -107,15 +107,16 @@ More details may be found at the [Jekyll-Scholar documentation](https://github.c
 1. Add a new publication to your BibTeX file by appending the BibTeX of the new paper to [\_bibliography/papers.bib](_bibliography/papers.bib).
 2. Add the following fields to the BibTeX entry for the new paper:
 ```yaml
-renamed   = {Michael Potter , Deniz Erdogmus}, # spell out full names of the authors to easily link the paper to user profiles
-preview   = {J_Potter_UAVRec_TAES_2024.png}, # display a preview image of the paper
-abstract  = {Write your abstract of paper here},
-html      = {Link to your paper here likehttps://ieeexplore.ieee.org/abstract/document/10638802},
-status    = {published}, # published , arxiv , submitted
-selected  = {true}, # true / false. If true, displays the paper on the about page of the website AND the publications page
-abbr      = {TAES}, # Abbreviation for the journal / venue
+renamed={Michael Potter , Deniz Erdogmus}, # spell out full names of the authors to easily link the paper to user profiles
+preview={J_Potter_UAVRec_TAES_2024.png}, # display a preview image of the paper
+abstract={Write your abstract of paper here},
+html= {Link to your paper here likehttps://ieeexplore.ieee.org/abstract/document/10638802},
+status={published}, # published , arxiv , submitted
+selected={true}, # true / false. If true, displays the paper on the about page of the website AND the publications page
+abbr={TAES}, # Abbreviation for the journal / venue
+year={2023},
 ```
-3. Add a preview image of the paper to the `img\publication_preview` directory. 
+3. Add a preview image of the paper to the `assets\img\publication_preview` directory. 
 Save the image using the SPIRAL naming conventions found in the [SPIRAL handbook](https://github.com/neu-spiral/SPIRAL-Handbook/wiki/writing-papers#package-naming-conventions).
 
 [![Publications Preview](readme_preview/publications.png)](https://cogsyslab.github.io/nu-csl/publications/)

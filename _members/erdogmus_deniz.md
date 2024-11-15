@@ -31,7 +31,7 @@ profile:
 
 Deniz Erdogmus graduated with B.S. in Electrical & Electronics Engineering (EEE), and the B.S. in Mathematics in 1997, and M.S. in EEE in 1999 from the Middle East Technical University, Ankara, Turkey. He received his Ph.D. in Electrical & Computer Engineering from the University of Florida in 2002, where he stayed as a postdoctoral research associate until 2004. Prior to joining the Northeastern faculty in 2008, he held an Assistant Professor position at the Oregon Health and Science University. His expertise is in information theoretic and nonparametric machine learning and adaptive signal processing, specifically focusing on cognitive signal processing including brain interfaces and assistive technologies. Deniz has been serving as an associate editor IEEE Transactions on Signal Processing, Transactions on Neural Networks, Signal Processing Letters, and Elsevier Neurocomputing. He is a member of the IEEE-SPS Machine Learning for Signal Processing Technical Committee.
 
-## Current service activties
+## Current service activities
 
 * CTO, KRI at Northeastern University LLC, Mar 2022 – present
 * Technical Director, Kostas Research Institute, Mar 2022 – present

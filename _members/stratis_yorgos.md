@@ -5,16 +5,16 @@ group: Staff
 group_rank: 2
 team_frontpage: true
 
-title: Dr. Stratis Yorgos
-description: Profile of Dr. Stratis Yorgos, Postdoctoral Researcher at the Cognitive Systems Lab.
+title: Dr. Yorgos Stratis
+description: Profile of Dr. Yorgos Stratis, Postdoctoral Researcher at the Cognitive Systems Lab.
 lastname: Yorgos
-publications: 'author^=*Yorgos'
+publications: 'author^=*Yorgos || author^=*Stratis Yorgos'
 
 teaser: >
     I am a researcher with expertise in physics and machine learning. I strongly value soft skills and can convey complex technical concepts to non-experts. I believe in the power of collaboration between interdisciplinary teams and am interested in partnering with industry affiliates to apply cutting edge research to address problems with social, medical, and economic ramifications.
 
 profile:
-    name: Dr. Stratis Yorgos
+    name: Dr. Yorgos Stratis
     position: Associate Research Scientist
     align: right
     image: profile_pictures/yorgoss.jpeg

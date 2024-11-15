@@ -130,6 +130,39 @@ We display GitHub repositories and user profiles on the `/repositories/` page.
 
 [![Repositories Preview](readme_preview/repositories.png)](https://cogsyslab.github.io/nu-csl/repositories/)
 
-Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories to the `/repositories/` page. 
+#### Adding a new github user profile
+1. Edit the `_data/repositories.yml` and add the username to to the list of `github_users` 
+
+#### Adding a new github repository
+1. Edit the `_data/repositories.yml` and add the github repository to to the list of `github_repos` as `username/repo_name`
+**OR**
+2. Add the CSL team (under the SPIRAL organization) to the github repository's collaborators following the instructions [here](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository). 
+If you do this, the repository will automatically be added to the `/repositories/` page on the website, and you do not need to do step 1. You will find your repository under the `_data/repositories_scrape.yml`.
+
+Note, your github repository will only appear on the `/repositories/` page if it is public.
+
+```yaml
+github_users:
+  - Yunusbcr
+  - mlpotter
+  - klockwood19
+  - ahmetdemirkayaee
+  - akbar-navid
+  - Elifnursunger
+  - singh17ashu
+  - byzklknl
+  - Faghihpirayesh
+  - paulghanem
+
+github_organizations:
+  - neu-spiral
+
+repo_description_lines_max: 2
+
+github_repos:
+  - mlpotter/SAWAR
+  - mlpotter/RCS_ATR
+  - CAMBI-tech/BciPy
+```
 
 Note, that all users and public repositories in the Cognitive Science Lab are automatically scraped from the CSL team in the SPIRAL github organization using the `_plugins/github_repos.rb` Ruby script plugin.

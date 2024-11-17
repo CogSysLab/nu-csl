@@ -19,6 +19,7 @@ profile:
     linkedin: azizkocanaogullari
     scholar: https://scholar.google.com/citations?user=kZEj_OkAAAAJ&hl=en
     image: profile_pictures/azizk.jpg
+    website: https://www.linkedin.com/in/azizkocanaogullari/
 ---
 
 I am a postdoctoral research fellow who codes and does math on a daily basis. My area of interest is mainly focused on signal processing and machine learning.

@@ -33,6 +33,6 @@ Michael Potter is a Ph.D. candidate at Northeastern University Cognitive Systems
 
 
 ## Awards
-* Ralph A Evans/ PK McElroy Award for Best Paper for your paper Bayesian Weapon System Modeling with Cox-Weibull Neural Network, presented at RAMS 2023.
+* Ralph A Evans/ PK McElroy Award for best paper (RAMS 2023, *Bayesian Weapon System Modeling with Cox-Weibull Neural Network, presented at RAMS 2023*)
 * SMART Scholarship
-* Northeastern University ECE Graduate Fellowship
+* Northeastern University ECE Scholars Fellowship

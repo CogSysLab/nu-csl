@@ -118,7 +118,7 @@ year={2023},
 ```
 3. Add a preview image of the paper to the `assets\img\publication_preview` directory. 
 Save the image using the SPIRAL naming conventions found in the [SPIRAL handbook](https://github.com/neu-spiral/SPIRAL-Handbook/wiki/writing-papers#package-naming-conventions).
-
+To reduce the memory footprint of the preview image, use [squoosh.app](https://squoosh.app/) to convert the image to `webp` format.
 [![Publications Preview](readme_preview/publications.png)](https://cogsyslab.github.io/nu-csl/publications/)
 
 

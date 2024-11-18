@@ -33,7 +33,12 @@ We drew inspiration from many other **al-folio** and [Jekyll](https://jekyllrb.c
 ### Preview Site Locally
 
 You can build your GitHub Pages site locally to preview and test changes to your site by following the instructions from github documentation [here](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll).
-After following the instructions, the suggested terminal command to launch the local server is:
+After following the instructions go to the local repository folder and run the following command (this is just done once unless new gems are added)
+```
+bundle install
+```
+Then run the following command to build the site and serve it locally
+```
 
 ```bash
 bundle exec jekyll serve --force_polling

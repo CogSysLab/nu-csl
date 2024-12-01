@@ -6,7 +6,7 @@ group_rank: 10
 team_frontpage: false
 
 title: Assistant Professor
-company: School of Computing, DePaul University
+company: DePaul University
 description: Profile of PhD Jamshid Sourati, Assistant Professor at School of Computing, DePaul University.
 lastname: Sourati
 publications: 'author^=*Jamshid Sourati || renamed^=*Jamshid Sourati'

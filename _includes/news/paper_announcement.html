@@ -1,0 +1,17 @@
+<div class="paper-announcement">
+    <div class="paper-announcement-container">
+        <!-- Author Section -->
+        <div class="paper-announcement-author-section">
+            <div class="paper-announcement-profile-img-container">
+                <img src="{{ '/assets/img/profile_pictures/' | append: include.profile_image | relative_url }}" alt="{{ include.author_name }}" class="profile-img">
+            </div>
+            <p class="author-name">{{ include.author_name }}</p>
+        </div>
+
+        <!-- Paper Details -->
+        <div class="paper-announcement-paper-details">
+            <h2 class="paper-title">{{ include.paper_title }}</h2>
+            <p class="paper-description">{{ include.paper_description | default: "No description provided." }}</p>
+        </div>
+    </div>
+</div>

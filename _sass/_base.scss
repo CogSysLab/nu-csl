@@ -1568,3 +1568,103 @@ ninja-keys::part(ninja-input-wrapper) {
     height: clamp(250px, 50vw, 650px); /* Adjust the height as needed */
     width: 100%; /* Responsive image width */
 }
+
+/* add paper announcement details */
+/* Base Styles for Paper Announcement */
+.paper-announcement {
+    .paper-announcement-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .paper-announcement-author-section {
+        flex: 1 1 30%;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .paper-announcement-profile-img-container {
+        width: 100%;
+        height: auto;
+        max-width: 200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 100%;
+        height: auto;
+        max-height: clamp(150px, 25vw, 200px);
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .author-name {
+        margin-top: 5px; /* Reduced margin */
+        font-weight: bold;
+        font-size: clamp(14px, 2vw, 18px);
+    }
+
+    .paper-announcement-paper-details {
+        flex: 2 1 60%;
+        padding: 0 10px;
+    }
+
+    .paper-title {
+        color: #007acc;
+        font-size: clamp(18px, 3vw, 24px);
+    }
+
+    .paper-description {
+        font-size: clamp(12px, 2.5vw, 16px);
+        line-height: 1.5;
+    }
+
+    /* Adjust images and text for smaller screens */
+    @media (max-width: 768px) {
+        .paper-announcement-container {
+            flex-direction: column;
+        }
+
+        .profile-img, .method-img {
+            width: 100%;
+            max-height: clamp(150px, 25vw, 200px);
+            height: auto;
+        }
+
+        .paper-announcement-paper-details {
+            text-align: left;
+        }
+
+        .paper-announcement-author-section {
+            text-align: center;
+        }
+
+        .paper-title, .paper-description {
+            font-size: clamp(14px, 3vw, 16px);
+        }
+    }
+
+    /* Adjust images and text for medium screens */
+    @media (max-width: 1024px) {
+        .profile-img, .method-img {
+            width: 90%;
+            max-height: clamp(180px, 30vw, 250px);
+            height: auto;
+        }
+
+        .paper-announcement-container {
+            flex-direction: row;
+        }
+
+        .paper-title {
+            font-size: clamp(14px, 3vw, 20px);
+        }
+
+        .paper-description {
+            font-size: clamp(10px, 2.5vw, 18px);
+        }
+    }
+}

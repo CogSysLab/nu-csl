@@ -1622,6 +1622,15 @@ ninja-keys::part(ninja-input-wrapper) {
         line-height: 1.5;
     }
 
+    /* Resizing profile images when there are multiple authors */
+    .small-profile-img {
+        width: 100%;
+        height: 100%;
+        max-height: clamp(100px, 20vw, 120px);
+        max-width: clamp(100px, 20vw, 120px); /* Ensures width and height are the same */
+        object-fit: cover;
+        border-radius: 50%;
+    }
     /* Adjust images and text for smaller screens */
     @media (max-width: 768px) {
         .paper-announcement-container {
@@ -1632,6 +1641,13 @@ ninja-keys::part(ninja-input-wrapper) {
             width: 100%;
             max-height: clamp(150px, 25vw, 200px);
             height: auto;
+        }
+
+          /* Apply small-profile-img for multiple authors */
+        /* Apply small-profile-img for multiple authors */
+        .small-profile-img {
+            max-height: clamp(80px, 15vw, 110px);
+            max-width: clamp(80px, 15vw, 110px); /* Keeps image circular */
         }
 
         .paper-announcement-paper-details {
@@ -1655,6 +1671,11 @@ ninja-keys::part(ninja-input-wrapper) {
             height: auto;
         }
 
+        /* Apply small-profile-img for multiple authors */
+        .small-profile-img {
+            max-height: clamp(120px, 20vw, 140px);
+            max-width: clamp(120px, 20vw, 140px); /* Keeps image circular */
+        }
         .paper-announcement-container {
             flex-direction: row;
         }

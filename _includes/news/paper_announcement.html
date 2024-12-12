@@ -2,10 +2,17 @@
     <div class="paper-announcement-container">
         <!-- Author Section -->
         <div class="paper-announcement-author-section">
-            <div class="paper-announcement-profile-img-container">
-                <img src="{{ '/assets/img/profile_pictures/' | append: include.profile_image | relative_url }}" alt="{{ include.author_name }}" class="profile-img">
-            </div>
-            <p class="author-name">{{ include.author_name }}</p>
+            {% assign author_list = include.author_names | split: ',' %}
+            {% assign image_list = include.profile_images | split: ',' %}
+            {% for author in author_list %}
+                {% assign image = image_list[forloop.index0] %}
+                <div class="author-container">
+                    <div class="paper-announcement-profile-img-container">
+                        <img src="{{ '/assets/img/profile_pictures/' | append: image | relative_url }}" alt="{{ author }}" class="profile-img {% if author_list.size > 1 %}small-profile-img{% endif %}">
+                    </div>
+                    <p class="author-name">{{ author }}</p>
+                </div>
+            {% endfor %}
         </div>
 
         <!-- Paper Details -->

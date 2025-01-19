@@ -131,6 +131,30 @@ To reduce the memory footprint of the preview image, use [squoosh.app](https://s
 
 ---
 
+### Adding a new news post
+
+1. Add a new markdown (`.md`) file to the `/_news/` folder
+2. Add the following `markdown` and `html`/`liquid` template from the `/_includes/` folder
+
+```markdown
+---
+layout: post
+title: 🎉 2 Papers accepted to AAAI 2025! 🎉
+date: 2024-12-09
+inline: false
+related_posts: false
+---
+
+{% include news/paper_announcement.html
+    profile_images="ElifnurSunger.png" <!-- The authors profile picture found in assets/img/profile_pictures  -->
+    author_names="Elifnur Sunger" <!-- The authors first and last name separated by a space -->
+    paper_title="MarkovType: A Markov Decision Process" <!-- The manuscript title -->
+    paper_description="paragraph about paper" <!-- details about the paper and publication venue -->
+%}
+```
+
+To see how to add multiple authors and profile pictures to the `news/paper_announcement.html` template, look at the `_news/12102024_TBME.md` file as an example.
+
 ### GitHub's repositories and user profiles
 
 We display GitHub repositories and user profiles on the `/repositories/` page.

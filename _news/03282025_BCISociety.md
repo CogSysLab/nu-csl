@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 🧠 1 Paper Accepted to BCI Society Readings 2025! 🧠
+title: 🧠 1 Paper accepted to BCI Society Readings 2025! 🧠
 date: 2025-03-28
 inline: false
 related_posts: false

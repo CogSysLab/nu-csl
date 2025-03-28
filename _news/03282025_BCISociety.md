@@ -20,10 +20,10 @@ related_posts: false
 ---
 
 {% include news/paper_announcement.html
-profile_images="celikb.jpg"
-author_names="Başak Celik"
-paper_title="Multimodal Sensor Fusion for EEG-Based BCI Typing Systems"
-paper_description="For people with severe speech and physical impairments (SSPI), a robust communication interface is often a necessity to improve quality of life. Non-implantable electroencephalography (EEG)-based BCI typing systems are one option in the field to restore communication. In this work, we describe a multimodal fusion algorithm combining EEG and gaze tracking (i.e., fixation and trajectory) for control of an ERP-based BCI. This work focuses on a specific BCI paradigm called single-character-presentation (SCP) based visual presentation, which consists of symbols presented in matrix form and individually highlighted in randomized order. We develop and compare probabilistic Bayesian fusion algorithms of increasing complexity to observe the effect of probabilistic assumption sets on the multimodal BCI performance. We propose a method assuming positional and temporal dependence in gaze evidence. Experiments with both control participants and people with SSPI show that the proposed multimodal Bayesian fusion method significantly improves performance in symbol selection. Code is publicly available at https://github.com/CAMBI-tech/BciPy."
+    profile_images="celikb.JPG"
+    author_names="Başak Celik"
+    paper_title="Multimodal Sensor Fusion for EEG-Based BCI Typing Systems"
+    paper_description="For people with severe speech and physical impairments (SSPI), a robust communication interface is often a necessity to improve quality of life. Non-implantable electroencephalography (EEG)-based BCI typing systems are one option in the field to restore communication. In this work, we describe a multimodal fusion algorithm combining EEG and gaze tracking (i.e., fixation and trajectory) for control of an ERP-based BCI. This work focuses on a specific BCI paradigm called single-character-presentation (SCP) based visual presentation, which consists of symbols presented in matrix form and individually highlighted in randomized order. We develop and compare probabilistic Bayesian fusion algorithms of increasing complexity to observe the effect of probabilistic assumption sets on the multimodal BCI performance. We propose a method assuming positional and temporal dependence in gaze evidence. Experiments with both control participants and people with SSPI show that the proposed multimodal Bayesian fusion method significantly improves performance in symbol selection. Code is publicly available at https://github.com/CAMBI-tech/BciPy."
 %}
 
 ---

@@ -5,7 +5,7 @@
 
 [![Preview](readme_preview/CSLlogo.png)](https://cogsyslab.github.io/nu-csl/)
 
-**A simple, clean, and response [Jekyll](https://jekyllrb.com/) website for the Cognitive Systems Lab**
+**A simple , clean , and response [Jekyll](https://jekyllrb.com/) website for the Cognitive Systems Lab**
 ---
 
 [![deploy](https://github.com/alshedivat/al-folio/actions/workflows/deploy.yml/badge.svg)](https://github.com/alshedivat/al-folio/actions/workflows/deploy.yml)

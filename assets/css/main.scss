@@ -6,6 +6,8 @@
 // Dimensions
 $max-content-width: {{ site.max_width }};
 
+// Consider inlining critical CSS for above-the-fold content in your HTML <head> for better performance.
+
 @import
   "variables",
   "themes",
@@ -15,9 +17,9 @@ $max-content-width: {{ site.max_width }};
   "tabs",
   "typograms",
   "font-awesome/fontawesome",
-  "font-awesome/brands",
-  "font-awesome/solid",
-  "font-awesome/regular",
+  // "font-awesome/brands",
+  // "font-awesome/solid",
+  // "font-awesome/regular",
   "tabler-icons/tabler-icons.scss",
   "tabler-icons/tabler-icons-filled.scss",
   "tabler-icons/tabler-icons-outline.scss"

@@ -8,7 +8,6 @@ nav_order: 7
 hide_title: true
 header-background-image: "/assets/img/header/teambackground.webp"
 social: true
-team: true
 ---
 <p style="font-size: 1em;">Click on any of the lab members to get more information!.</p>
 
@@ -22,6 +21,7 @@ team: true
 
     {% assign members = site.members | sort: "lastname" | where: "group", group %}
     {% for member in members %}
+
 
 <p>
         {% include profiles/current_member.html member=member %} <!-- Include the member card here -->

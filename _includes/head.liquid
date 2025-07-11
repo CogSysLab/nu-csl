@@ -29,6 +29,8 @@
   type="text/css"
   href="{{ site.third_party_libraries.google_fonts.url.fonts }}&display=swap"
 >
+<link rel="preload" as="style" href="{{ '/assets/css/academicons.min.css' | relative_url | bust_file_cache }}">
+<link rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url | bust_file_cache }}" media="print" onload="this.media='all'">
 
 <!-- Code Syntax Highlighting -->
 <link
@@ -38,6 +40,8 @@
   media=""
   id="highlight_theme_light"
 >
+<link rel="preload" as="style" href="{{ '/assets/css/jekyll-pygments-themes-github.css' | relative_url | bust_file_cache }}">
+<link rel="stylesheet" href="{{ '/assets/css/jekyll-pygments-themes-github.css' | relative_url | bust_file_cache }}" media="print" onload="this.media='all'" id="highlight_theme_light">
 
 {% if page.toc and page.toc.sidebar %}
   <!-- Sidebar Table of Contents -->

@@ -27,7 +27,7 @@
   defer
   rel="stylesheet"
   type="text/css"
-  href="{{ site.third_party_libraries.google_fonts.url.fonts }}"
+  href="{{ site.third_party_libraries.google_fonts.url.fonts }}&display=swap"
 >
 
 <!-- Code Syntax Highlighting -->
@@ -66,10 +66,11 @@
   <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url | bust_file_cache}}">
 {% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
+<link rel="preload" as="style" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
 <!-- Dark Mode -->
-<script src="{{ '/assets/js/theme.js' | relative_url | bust_file_cache }}"></script>
+<!-- theme.js moved to end of body for non-blocking render -->
 {% if site.enable_darkmode %}
   <link
     defer

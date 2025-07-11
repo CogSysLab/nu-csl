@@ -1,4 +1,4 @@
-{% if site.enable_math %}
+{% if page.mathjax or site.enable_math %}
   {% unless page.pseudocode %}
     <!-- MathJax -->
     <script type="text/javascript">

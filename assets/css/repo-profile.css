@@ -1,0 +1,15 @@
+/* Repo profile pic and username styles - for use only on repo/profile pages/components */
+.repo {
+  text-align: center;
+}
+.repo .profile-pic {
+  width: clamp(20px, 10vw, 70px);
+  height: clamp(20px, 10vw, 70px);
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 1rem;
+}
+.repo .profile-username {
+  font-size: clamp(0.15rem, 2vw, 1.5rem);
+  margin-top: 1rem;
+}

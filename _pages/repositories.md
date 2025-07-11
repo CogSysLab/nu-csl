@@ -14,6 +14,7 @@ social: true
 
 ## GitHub Users
 
+<link rel="stylesheet" href="/assets/css/repo-profile.css">
 <div class="repositories d-flex flex-wrap flex-row justify-content-between align-items-center">
   {% for user in site.data.repositories_combined.github_users %}
     {% include repository/repo_user.liquid username=user %}

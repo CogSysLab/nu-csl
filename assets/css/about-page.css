@@ -1,0 +1,50 @@
+/* Increase font size specifically for the About page */
+/* Font Size Scaling Using clamp() to fix for phone... attempt #1 */
+#about-page .post-title,
+#about-page #recent-publications,
+#about-page #publications,
+/* Use .about-page class instead of #about-page for all selectors */
+.about-page .post-title,
+.about-page #recent-publications,
+.about-page #publications,
+.about-page #news {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  margin: 1rem 0;
+}
+
+.about-page p,
+.about-page td,
+.about-page th,
+.about-page .post-description,
+.about-page .contact-note,
+.about-page .publications {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  margin: 1rem 0;
+}
+
+.about-page #news table {
+  width: 100%;
+  overflow-x: auto;
+  margin: 0;
+}
+
+.about-page #news table th,
+.about-page #news table td {
+  padding: 0.5rem;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+.about-page .container,
+.about-page .site {
+  max-width: clamp(70%, 90%, 100%) !important;
+  margin: 0 auto;
+}
+#about-page {
+  margin: 0 auto;
+}
+//
+//.about-container, .site {
+//  max-width: clamp(70%, 90%, 100%) !important; /* Override max-width from _config.yml */
+//  margin: 0 auto; /* Center the page */
+//}

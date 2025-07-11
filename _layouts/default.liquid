@@ -23,7 +23,8 @@
     {% include header.liquid %}
 
     {% if page.header-background-image %}
-        <div class="header-background" style="background-image: url('{{ page.header-background-image | relative_url }}');"></div>
+        <link rel="preload" as="image" href="{{ page.header-background-image | relative_url }}">
+        <div class="header-background" style="background-image: url('{{ page.header-background-image | relative_url }}'); width: 100vw; height: 40vh; background-size: cover; background-position: center;"></div>
     {% endif %}
 
     <!-- Content -->

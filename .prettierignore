@@ -13,3 +13,4 @@ _sass/tabler-icons/*.scss
 _data/repositories.yml
 _data/repositories_combined.yml
 _data/repositories_scrape.yml
+assets/js/distillpub/transforms.v2.js

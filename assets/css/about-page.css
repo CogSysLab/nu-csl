@@ -43,8 +43,24 @@
 #about-page {
   margin: 0 auto;
 }
-//
-//.about-container, .site {
-//  max-width: clamp(70%, 90%, 100%) !important; /* Override max-width from _config.yml */
-//  margin: 0 auto; /* Center the page */
-//}
+
+.about-page .table-responsive .table a:hover {
+  color: blue !important;
+  text-decoration: underline !important;
+}
+
+/* content below profile image */
+.about-page .address,
+.about-page .address a,
+.about-page .address .name {
+  font-size: clamp(0.85rem, 2vw, 1rem);
+}
+/* Make profile position and address smaller */
+.about-page .address .name,
+.about-page .address br + span,
+.about-page .address a,
+.about-page .address .profile-position,
+.about-page .address .post,
+.about-page .address .card-subtitle {
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+}

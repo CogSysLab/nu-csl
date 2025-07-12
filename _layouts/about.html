@@ -27,7 +27,7 @@ layout: default
                 {% if page.profile.href %}<a href="{{ page.profile.href | relative_url }}">{% endif %}
                   <span class="name">{{ page.profile.name }}</span>
                 {% if page.profile.href %}</a>{% endif %}
-                {% if page.profile.position %}<br />{{ page.profile.position }}{% endif %}
+                {% if page.profile.position %}<br /><span class="profile-position">{{ page.profile.position }}</span>{% endif %}
                 {% if page.profile.email %}<br /><a href="mailto:{{ page.profile.email }}"><i class="fas fa-envelope"></i> {{ page.profile.email }}</a>{% endif %}
                 {% if page.profile.phone %}<br /><a href="tel:{{ page.profile.phone }}"><i class="fas fa-phone"></i> {{ page.profile.phone }}</a>{% endif %}
                 {% if page.profile.linkedin %}<br /><a href="https://www.linkedin.com/in/{{ page.profile.linkedin }}/" target="_blank"><i class="fab fa-linkedin"></i> {{ page.profile.linkedin }}</a>{% endif %}

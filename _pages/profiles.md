@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /people
+permalink: /people/
 title: Team
 description: Members and close collaborators of the group.
 nav: true

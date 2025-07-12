@@ -15,17 +15,18 @@
     {% include head.liquid %}
   </head>
 
-
-
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
     <!-- Header -->
     {% include header.liquid %}
 
-    {% if page.header-background-image %}
-        <link rel="preload" as="image" href="{{ page.header-background-image | relative_url }}">
-        <div class="header-background" style="background-image: url('{{ page.header-background-image | relative_url }}'); width: 100vw; height: 40vh; background-size: cover; background-position: center;"></div>
-        <img src="{{ page.header-background-image | relative_url }}" fetchpriority="high" style="display:none;" alt="Header background">
+    {% if page['header-background-image'] %}
+      <link rel="preload" as="image" href="{{ page.header-background-image | relative_url }}">
+      <div
+        class="header-background"
+        style="background-image: url('{{ page.header-background-image | relative_url }}'); width: 100vw; height: 40vh; background-size: cover; background-position: center;"
+      ></div>
+      <img src="{{ page.header-background-image | relative_url }}" fetchpriority="high" style="display:none;" alt="Header background">
     {% endif %}
 
     <!-- Content -->
@@ -54,7 +55,7 @@
         {{ content }}
       {% endif %}
     </div>
-    
+
     <!-- Footer -->
     {% include footer.liquid %}
 

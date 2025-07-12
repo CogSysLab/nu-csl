@@ -1,24 +1,20 @@
 ---
 layout: default
 ---
-<div class="post">
 
+<div class="post">
   <header class="post-header">
     {% if page.hide_title != true %}
-      <h1 class="post-title">{{ page.title }}</h1>
-    {% endif %}
-    {% comment %}<p class="post-description">{{ page.description }}</p>{% endcomment %}
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% endif %} {% comment %}
+    <p class="post-description">{{ page.description }}</p>
+    {% endcomment %}
   </header>
 
   <article>
-    {{ content }}
-
-      {% if page.publications %}
-        <h2>Publications</h2>
-        <div class="publications">
-            {% bibliography -f papers -q @*[{{page.publications}}]* %}
-        </div>
-      {% endif %}
+    {{ content }} {% if page.publications %}
+    <h2>Publications</h2>
+    <div class="publications">{% bibliography -f papers -q @*[{{page.publications}}]* %}</div>
+    {% endif %}
   </article>
-
 </div>

@@ -18,7 +18,12 @@ body {
 }
 
 /* Base header styling with dynamic font sizes */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 1rem 0; /* Optional margin adjustment */
 }
 
@@ -39,13 +44,12 @@ h4 {
 }
 
 h5 {
-  font-size: clamp(0.75rem, 2.5vw, .85rem); /* Dynamically adjusts between 0.75rem and 1.5rem */
+  font-size: clamp(0.75rem, 2.5vw, 0.85rem); /* Dynamically adjusts between 0.75rem and 1.5rem */
 }
 
 h6 {
   font-size: clamp(0.625rem, 2vw, 0.85rem); /* Dynamically adjusts between 0.625rem and 1rem */
 }
-
 
 body.fixed-top-nav {
   // Add some padding for the nav-bar.

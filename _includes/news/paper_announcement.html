@@ -1,25 +1,29 @@
-<link rel="stylesheet" href="{{ '/assets/css/paper-announcement.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/paper-announcement.css' | relative_url }}" />
 <div class="paper-announcement">
-    <div class="paper-announcement-container">
-        <!-- Author Section -->
-        <div class="paper-announcement-author-section">
-            {% assign author_list = include.author_names | split: ',' %}
-            {% assign image_list = include.profile_images | split: ',' %}
-            {% for author in author_list %}
-                {% assign image = image_list[forloop.index0] %}
-                <div class="author-container">
-                    <div class="paper-announcement-profile-img-container">
-                        <img src="{{ '/assets/img/profile_pictures/' | append: image | relative_url }}" alt="{{ author }}" class="profile-img {% if author_list.size > 1 %}small-profile-img{% endif %}">
-                    </div>
-                    <p class="author-name">{{ author }}</p>
-                </div>
-            {% endfor %}
+  <div class="paper-announcement-container">
+    <!-- Author Section -->
+    <div class="paper-announcement-author-section">
+      {% assign author_list = include.author_names | split: ',' %} {% assign image_list = include.profile_images | split: ',' %} {% for author in
+      author_list %} {% assign image = image_list[forloop.index0] %}
+      <div class="author-container">
+        <div class="paper-announcement-profile-img-container">
+          <img
+            src="{{ '/assets/img/profile_pictures/' | append: image | relative_url }}"
+            alt="{{ author }}"
+            class="profile-img {% if author_list.size > 1 %}small-profile-img{% endif %}"
+          />
         </div>
-
-        <!-- Paper Details -->
-        <div class="paper-announcement-paper-details">
-            <h2 class="paper-title">{{ include.paper_title }}</h2>
-            <p class="paper-description" style="text-align: justify; text-align-last: left;">{{ include.paper_description | default: "No description provided." }}</p>
-        </div>
+        <p class="author-name">{{ author }}</p>
+      </div>
+      {% endfor %}
     </div>
+
+    <!-- Paper Details -->
+    <div class="paper-announcement-paper-details">
+      <h2 class="paper-title">{{ include.paper_title }}</h2>
+      <p class="paper-description" style="text-align: justify; text-align-last: left">
+        {{ include.paper_description | default: "No description provided." }}
+      </p>
+    </div>
+  </div>
 </div>

@@ -46,6 +46,7 @@ social: true
 {% endif %}
 
 {% if site.data.repositories_combined.github_organizations %}
+
 <!--
 ## GitHub Organizations
 

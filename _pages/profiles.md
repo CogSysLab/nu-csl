@@ -9,10 +9,12 @@ hide_title: true
 header-background-image: "/assets/img/header/teambackground.webp"
 social: true
 ---
+
 <p style="font-size: 1em;">Click on any of the lab members to get more information!.</p>
 
 {% assign groups = site.members | sort: "group_rank" | map: "group" | uniq %}
 {% for group in groups %}
+
 <div style="margin-bottom: 60px;"></div> <!-- Spacer for additional spacing -->
 
 {% if group != "Alumni" %}
@@ -22,7 +24,6 @@ social: true
     {% assign members = site.members | sort: "lastname" | where: "group", group %}
     {% for member in members %}
 
-
 <p>
         {% include profiles/current_member.html member=member %} <!-- Include the member card here -->
 </p>
@@ -30,10 +31,6 @@ social: true
 
 {% endif %}
 {% endfor %}
-
-
-
-
 
 <h2 style="font-size: clamp(1.5rem, 4vw, 2.5rem);">Alumni</h2> <!-- Dynamic title font size -->
 {% assign members = site.members | sort: "lastname" | where: "group", "Alumni" %}

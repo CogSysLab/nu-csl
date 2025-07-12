@@ -8,24 +8,24 @@ team_frontpage: true
 title: Ashutosh Singh
 description: Profile of Ashutosh Singh, Doctoral Researcher at the Cognitive Systems Lab
 lastname: Singh
-publications: 'author^=*Singh || author^=Ashutosh Singh || renamed^=*Ashutosh Singh'
+publications: "author^=*Singh || author^=Ashutosh Singh || renamed^=*Ashutosh Singh"
 teaser: >
-    My research lies at the intersection of signal processing, control theory, and machine learning. I am particularly interested in understanding complex dynamical systems through the analysis of spatio-temporal data. By integrating techniques from signal processing and control theory, I aim to uncover the underlying mechanisms governing these complex systems. Currently, I am engaged in projects ranging from designing machine learning models to draw inference from bio-signals, generative modeling of 3D human motion and recognition of patterns in brain activity induced by emotional stimuli. 
-    In my leisure time, I enjoy engaging in conversations about geopolitics and stock market. I also love reading manga and watching anime.
+  My research lies at the intersection of signal processing, control theory, and machine learning. I am particularly interested in understanding complex dynamical systems through the analysis of spatio-temporal data. By integrating techniques from signal processing and control theory, I aim to uncover the underlying mechanisms governing these complex systems. Currently, I am engaged in projects ranging from designing machine learning models to draw inference from bio-signals, generative modeling of 3D human motion and recognition of patterns in brain activity induced by emotional stimuli. 
+  In my leisure time, I enjoy engaging in conversations about geopolitics and stock market. I also love reading manga and watching anime.
 profile:
-    name: Ashutosh Singh
-    align: right
-    image: profile_pictures/ashutoshsing.jpeg
-    role: PhD Candidate
-    email: singh.ashu@northeastern.edu
-    linkedin: ashutosh-singh-8b034070
-    website: https://ashutosh17dec.github.io
-    scholar: https://scholar.google.com/citations?user=t2mczyYAAAAJ&hl=en
-    address: >
-        College of Engineering<br />
-        EXP 760 <br />
-        Boston <br />
-        Huntington, Massachusetts
+  name: Ashutosh Singh
+  align: right
+  image: profile_pictures/ashutoshsing.jpeg
+  role: PhD Candidate
+  email: singh.ashu@northeastern.edu
+  linkedin: ashutosh-singh-8b034070
+  website: https://ashutosh17dec.github.io
+  scholar: https://scholar.google.com/citations?user=t2mczyYAAAAJ&hl=en
+  address: >
+    College of Engineering<br />
+    EXP 760 <br />
+    Boston <br />
+    Huntington, Massachusetts
 ---
 
 I am a Ph.D. student in the Cognitive Systems Lab at Northeastern University, where I am advised by Prof. Deniz Erdogmus. My research lies at the intersection of signal processing, control, and machine learning. I am fascinated by the ease with which humans process information and make decisions, and I aim to replicate this efficiency in machine learning models.

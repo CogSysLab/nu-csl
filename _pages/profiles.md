@@ -34,6 +34,8 @@ social: true
 
 <h2 style="font-size: clamp(1.5rem, 4vw, 2.5rem);">Alumni</h2> <!-- Dynamic title font size -->
 {% assign members = site.members | sort: "lastname" | where: "group", "Alumni" %}
+
+<link rel="stylesheet" href="{{ '/assets/css/past-member.css' | relative_url }}">
 <div class="alumni-container d-flex flex-wrap flex-row justify-content-between align-items-center gap:2px">
     {% for member in members %}
     <div class="alumni-item" style="flex: 0 1 150px; max-width: 100%; text-align: center; margin: 0px; flex-direction: row;">

@@ -1,0 +1,23 @@
+.past-member h5,
+.past-member h6 {
+  font-size: 0.8rem;
+  margin: inherit;
+}
+
+.past-member .card-img {
+  height: clamp(50px, 10vw, 120px);
+  width: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (max-width: 600px) {
+  .past-member .card-img {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 50%;
+  }
+}

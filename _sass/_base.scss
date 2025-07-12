@@ -23,6 +23,40 @@ hr {
   border-top: 1px solid var(--global-divider-color);
 }
 
+table {
+  td,
+
+  th {
+    font-size: 1rem;
+    padding: 1px 1rem 1px 0;
+  }
+
+  th {
+    font-weight: bold;
+  }
+}
+
+a,
+table.table a {
+  color: var(--global-theme-color);
+
+  &:hover {
+    color: var(--global-theme-color);
+    text-decoration: underline;
+  }
+
+  &:hover:after :not(.nav-item.dropdown) {
+    width: 100%;
+  }
+}
+
+.table-dark {
+  background-color: transparent;
+  &.table-bordered {
+    border: 1px solid var(--global-divider-color) !important;
+  }
+}
+
 blockquote {
   background: var(--global-bg-color);
   border-left: 5px solid var(--global-theme-color);
@@ -1420,31 +1454,6 @@ ninja-keys::part(ninja-input-wrapper) {
 
 /* past member profile */
 
-/* Ensure heading elements inherit universal font size styles */
-.past-member h5,
-.past-member h6 {
-  font-size: 0.8rem;  /* Inherit font size from global heading styles */
-  margin: inherit;     /* Inherit margin values from global heading styles */
-}
-
-.past-member .card-img {
-  height: clamp(50px, 10vw, 120px); /* Responsive image width */
-  width: auto;
-  border-radius: 50%; /* Circular shape */
-  object-fit: cover; /* Ensures the image fills the circular frame */
-  max-width: 100%;
-  padding-left: 0; /* Removes responsive left padding */
-  padding-right: 0;
-}
-
-/* Adjustments for smaller screens */
-@media (max-width: 600px) {
-  .past-member .card-img {
-    margin-left: 0; /* Centers the image horizontally */
-    margin-right: 0;
-    border-radius: 50%; /* Keeps the circular shape */
-  }
-}
 /* main.scss or custom-header.scss */
 /* assets/css/main.scss or another global CSS file */
 /* assets/css/main.scss or another global SCSS file */

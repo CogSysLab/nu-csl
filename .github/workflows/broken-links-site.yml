@@ -2,7 +2,7 @@ name: Check for broken links on site
 
 on:
   workflow_run:
-    workflows: [Deploy Jekyll site to Pages]
+    workflows: [Deploy on who cares]
     types: [completed]
 
 jobs:

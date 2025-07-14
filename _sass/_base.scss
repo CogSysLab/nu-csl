@@ -298,9 +298,25 @@ ul.task-list input[type="checkbox"] {
 
 .navbar {
   box-shadow: none;
-  border-bottom: 1px solid var(--global-divider-color);
+  border-bottom: 3px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
   opacity: 0.95;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
+.navbar > .container,
+.navbar > .container-fluid {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  display: flex;
+  align-items: center;
 }
 
 .navbar .dropdown-menu {
@@ -338,21 +354,43 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-brand {
     color: var(--global-text-color);
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+  }
+  .navbar-brand img {
+    max-height: 48px;
+    width: auto;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block;
+    vertical-align: middle;
+    box-shadow: none;
+    background: none;
   }
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
+    padding-top: 2px;
+    padding-bottom: 2px;
 
     &:hover {
       color: var(--global-hover-color);
     }
   }
 
+  // Only apply extra vertical padding to nav-link inside dropdown menu
+  .dropdown-menu .nav-link {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
     font-weight: bolder;
     color: var(--global-theme-color);
-
     &:hover {
       color: var(--global-hover-color);
     }
@@ -362,13 +400,11 @@ ul.task-list input[type="checkbox"] {
     padding-bottom: 0;
     padding-top: 0;
     font-size: 1.7rem;
-
     a {
       i::before {
         color: var(--global-text-color);
         transition-property: all 0.2s ease-in-out;
       }
-
       &:hover {
         i::before {
           color: var(--global-theme-color);
@@ -381,8 +417,8 @@ ul.task-list input[type="checkbox"] {
 /* added for custom size of navigation bar */
 .navbar-nav .nav-item .nav-link {
   color: var(--global-text-color);
-  padding: 12px 20px; /* Adjust padding for larger buttons */
-  font-size: clamp(0.8rem, 2.5vw, 1.5rem); /* Font size will scale between 1.5rem and 2.5rem, based on viewport width */
+  padding: 2px 20px; /* Minimal vertical padding for thinner navbar */
+  font-size: clamp(0.9rem, 2.5vw, 1.5rem); /* Font size will scale between 1.5rem and 2.5rem, based on viewport width */
   transition: background-color 0.2s ease; /* Optional: smooth transition */
 }
 
@@ -1303,7 +1339,6 @@ ninja-keys::part(ninja-input-wrapper) {
   box-sizing: border-box;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px;
   border-radius: 6px;
-  padding: 8px 12px;
 }
 
 .newsletter-form-input:focus {
@@ -1438,7 +1473,6 @@ ninja-keys::part(ninja-input-wrapper) {
 
 /* Increase font size specifically for the About page */
 /* Font Size Scaling Using clamp() to fix for phone... attempt #1 */
-// ...existing code...
 
 /* custom repo profile pic sizing */
 
@@ -1458,7 +1492,7 @@ ninja-keys::part(ninja-input-wrapper) {
   background-position: center center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents repeating the image */
   width: 100vw; /* Full width of the viewport */
-  height: 30vh; /* Set the height of the header background (adjust as needed) */
+  height: 25vh; /* Set the height of the header background (adjust as needed) */
   margin-top: 0; /* Optional: Adjust if you need some gap between the top of the page */
   position: relative; /* Ensure it behaves like a normal block element in the flow */
 }

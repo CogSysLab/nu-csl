@@ -44,10 +44,10 @@
   margin: 0 auto;
 }
 
-.about-page .table-responsive .table a:hover {
+/* .about-page .table-responsive .table a:hover {
   color: blue !important;
   text-decoration: underline !important;
-}
+} */
 
 /* content below profile image */
 .about-page .address,

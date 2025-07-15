@@ -1,7 +1,7 @@
 ---
 layout: about
 inline: false
-group: Doctoral Researchers
+group: Alumni
 group_rank: 4
 
 title: Paul Ghanem

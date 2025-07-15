@@ -1,0 +1,6 @@
+#imageCarousel .carousel-item img {
+  height: clamp(250px, 50vw, 650px); /* Adjust the height as needed */
+  width: 100%; /* Responsive image width */
+  display: block;
+  margin: 0 auto;
+}

@@ -1557,17 +1557,7 @@ ninja-keys::part(ninja-input-wrapper) {
   overflow: hidden;
 }
 
-#imageCarousel .carousel-item img {
-  height: clamp(250px, 50vw, 650px); /* Adjust the height as needed */
-  width: 100%; /* Responsive image width */
-  align-items: center; /* Center the image vertically */
-  justify-content: center;
-}
-
-#imageCarousel .carousel-item img {
-  display: block;
-  margin: 0 auto;
-}
+// ...existing code...
 
 /* add paper announcement details */
 /* Base Styles for Paper Announcement */

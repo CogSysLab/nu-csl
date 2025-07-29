@@ -863,7 +863,7 @@ footer.sticky-bottom {
 
   h1 {
     color: var(--global-theme-color);
-    font-size: clamp(1rem, 3vw, 2rem); /* Scales between 1.5rem and 2rem */
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Scales between 1.5rem and 2rem */
     text-align: center;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -873,7 +873,7 @@ footer.sticky-bottom {
     margin-bottom: 1rem;
 
     span {
-      font-size: clamp(0.5rem, 2vw, 1.5rem); /* Scales between 1rem and 1.5rem */
+      font-size: clamp(0.5rem, 1.5vw, 1rem); /* Scales between 1rem and 1.5rem */
     }
   }
 
@@ -895,12 +895,16 @@ footer.sticky-bottom {
 
       .preview {
         width: 100%;
-        min-width: 70px;
-        max-width: clamp(75px, 50vw, 600px); /* Scales up to 400px max */
-        max-height: clamp(50px, 30vw, 200px); /* Scales up to 200px max */
+        min-width: 120px;
+        max-width: clamp(120px, 40vw, 240px); /* Scales up to 225px max */
+        max-height: clamp(75px, 25vw, 150px); /* Scales up to 150px max */
         transition: transform 0.3s ease; /* Smooth zoom animation */
         display: block;
         margin: 0 auto; // Centers the image horizontally
+        border: 2px solid #000;
+        border-radius: 20px !important;
+        box-sizing: border-box; // Ensures border doesn't affect layout
+        overflow: hidden; // Ensures the image fits within the circle
       }
 
       .abbr {
@@ -926,16 +930,16 @@ footer.sticky-bottom {
       }
 
       .title {
-        font-weight: bolder;
-        font-size: clamp(0.75rem, 2vw, 1.25rem); /* Scales title size */
+        font-weight: bold;
+        font-size: clamp(0.75rem, 0.6vw, 1rem); /* Scales title size */
       }
 
       .periodical {
-        font-size: clamp(0.65rem, 2vw, 1rem); // Responsive font size for periodical text
+        font-size: clamp(0.65rem, 0.5vw, 0.9rem); // Responsive font size for periodical text
       }
 
       .author {
-        font-size: clamp(0.65rem, 2vw, 1rem); // Responsive font size for author text
+        font-size: clamp(0.65rem, 0.5vw, 0.9rem); // Responsive font size for author text
 
         a {
           border-bottom: 1px dashed var(--global-theme-color);
@@ -968,7 +972,7 @@ footer.sticky-bottom {
         a.btn {
           color: var(--global-text-color);
           border: 1px solid var(--global-text-color);
-          padding: clamp(0.05rem, 0.3vw, 0.2rem) clamp(0.1rem, 1vw, 1rem); /* Scales padding */
+          padding: clamp(0.05rem, 0.2vw, 0.2rem) clamp(0.1rem, 0.8vw, 1rem); /* Scales padding */
           margin-left: 0;
 
           &:hover {

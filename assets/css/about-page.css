@@ -1,12 +1,8 @@
 /* Increase font size specifically for the About page */
 /* Font Size Scaling Using clamp() to fix for phone... attempt #1 */
 #about-page .post-title,
-#about-page #recent-publications,
-#about-page #publications,
 /* Use .about-page class instead of #about-page for all selectors */
 .about-page .post-title,
-.about-page #recent-publications,
-.about-page #publications,
 .about-page #news {
   font-size: clamp(1.5rem, 5vw, 2.5rem);
   margin: 1rem 0;
@@ -16,8 +12,7 @@
 .about-page td,
 .about-page th,
 .about-page .post-description,
-.about-page .contact-note,
-.about-page .publications {
+.about-page .contact-note {
   font-size: clamp(1rem, 3vw, 1.5rem);
   margin: 1rem 0;
 }

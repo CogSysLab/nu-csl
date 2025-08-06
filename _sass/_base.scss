@@ -1000,6 +1000,10 @@ footer.sticky-bottom {
         }
       }
 
+      .badge {
+        font-size: 0.75em;
+      }
+
       .hidden {
         font-size: clamp(0.575rem, 1vw, 0.875rem); /* Scales hidden text size */
         max-height: 0px;
